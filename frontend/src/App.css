@@ -1,0 +1,57 @@
+/* Sweet Jesus Clone styles */
+
+.App {
+  font-family: 'Roboto Condensed', 'Oswald', system-ui, -apple-system, sans-serif;
+  color: #2a2a2a;
+}
+
+/* Paper / textured background */
+.paper-texture {
+  background-image:
+    radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 4px 4px, 8px 8px;
+  background-position: 0 0, 2px 2px;
+}
+
+.font-display {
+  font-family: 'Oswald', 'Roboto Condensed', system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-script {
+  font-family: 'Yellowtail', 'Pacifico', cursive;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Logo styling */
+.sj-logo span {
+  font-family: 'Oswald', 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.85;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: #5BC2C1;
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f4f4f4; }
+::-webkit-scrollbar-thumb { background: #5BC2C1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #4CAFAE; }
+
+/* Date input native styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.4);
+}
