@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import banner4 from '../assets/banners/BANNER4.jpg';
 import banner5 from '../assets/banners/BANNER5.jpg';
+import banner6 from '../assets/banners/BANNER6.jpg';
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
@@ -73,7 +74,10 @@ const Home = () => {
 
       {/* Cones row image */}
       <section className="bg-[#1a5e3a]">
-        <img src={banner4} alt="Madras Cafe authentic dosas" className="w-full max-w-5xl mx-auto block" />
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-16 px-6">
+          <img src={banner4} alt="Madras Cafe authentic dosas" className="w-full h-[400px] md:h-[500px] object-cover rounded-md shadow-2xl" />
+          <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[500px] object-cover rounded-md shadow-2xl" />
+        </div>
         <div className="text-center pb-16 px-6">
           <Link to="/menu" className="inline-block bg-[#f6e0b0] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-colors">
             VIEW THE FULL MENU
