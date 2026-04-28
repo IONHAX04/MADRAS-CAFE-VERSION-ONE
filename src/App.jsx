@@ -16,7 +16,7 @@ import { Toaster } from "./components/ui/toaster";
 
 function App() {
   return (
-    <div className="App min-h-screen flex flex-col bg-white">
+    <div className="App min-h-screen flex flex-col bg-[#f6e0b0]">
       <BrowserRouter>
         <ScrollToTop />
         <Header />
@@ -24,10 +24,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<MenuLanding />} />
-            <Route path="/menu/cones" element={<Menu />} />
-            <Route path="/menu/shakes" element={<Menu />} />
-            <Route path="/menu/sundaes" element={<Menu />} />
-            <Route path="/menu/sandwiches" element={<Menu />} />
+            <Route path="/menu/dosas" element={<Menu />} />
+            <Route path="/menu/beverages" element={<Menu />} />
+            <Route path="/menu/sweets" element={<Menu />} />
+            <Route path="/menu/snacks" element={<Menu />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/catering" element={<Catering />} />
             <Route path="/social" element={<Social />} />

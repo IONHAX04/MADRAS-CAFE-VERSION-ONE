@@ -7,13 +7,13 @@ import { NAV_LEFT, NAV_RIGHT } from '../data/mock';
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const linkBase = 'text-white font-display font-bold tracking-widest text-sm xl:text-base hover:opacity-70 transition-opacity';
+  const linkBase = 'text-[#1a5e3a] font-display font-bold tracking-widest text-sm xl:text-base hover:opacity-70 transition-opacity';
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className="sj-header sticky top-0 z-50 bg-[#5BC2C1] paper-texture">
+    <header className="sj-header sticky top-0 z-50 bg-[#f6e0b0] paper-texture border-b-2 border-[#1a5e3a]">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between py-4 lg:py-6">
+        <div className="flex items-center justify-between">
           {/* Left nav */}
           <nav className="hidden lg:flex items-center gap-10 flex-1">
             {NAV_LEFT.map((item) => (
@@ -25,7 +25,7 @@ const Header = () => {
 
           {/* Logo center */}
           <div className="flex-shrink-0 mx-auto lg:mx-6">
-            <Logo size="md" />
+            <Logo size="h-20 md:h-20" />
           </div>
 
           {/* Right nav */}
@@ -41,7 +41,7 @@ const Header = () => {
           <button
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-[#1a5e3a] p-2"
           >
             {open ? <X size={28} /> : <MenuIcon size={28} />}
           </button>
