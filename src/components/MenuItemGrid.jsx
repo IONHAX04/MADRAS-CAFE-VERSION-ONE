@@ -13,30 +13,26 @@ const MenuItemGrid = ({ items, label }) => {
           <h1 className="font-script text-[#1a5e3a] text-6xl md:text-8xl leading-none">{label}</h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item) => (
-            <article key={item.id} className="group flex flex-col items-center text-center">
-              <div className="relative w-full aspect-square overflow-hidden bg-[#f6e0b0]">
+            <article key={item.id} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col border border-neutral-100">
+              <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
                 {item.limited && (
-                  <span className="absolute top-4 right-4 z-10 bg-[#1a5e3a] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center text-[11px] font-display font-bold tracking-wide leading-tight">
+                  <span className="absolute top-3 right-3 z-10 bg-[#1a5e3a] text-white rounded-full w-14 h-14 flex flex-col items-center justify-center text-[9px] font-display font-bold tracking-wide leading-tight shadow-lg">
                     LIMITED<br />TIME!
                   </span>
                 )}
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
-              <h3 className="mt-6 font-display font-bold tracking-widest text-neutral-800 text-base md:text-lg">{item.name}</h3>
-              <p className="mt-3 text-neutral-600 text-sm leading-relaxed max-w-xs">{item.description}</p>
-              <button
-                onClick={() => toast({ title: 'Added to favourites', description: `${item.name} — we'll save this for you.` })}
-                className="mt-4 text-xs font-display tracking-widest text-[#1a5e3a] hover:text-[#4CAFAE] transition-colors"
-              >
-                SAVE TO FAVOURITES
-              </button>
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="font-display font-bold tracking-widest text-[#1a5e3a] text-lg mb-2 uppercase">{item.name}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed line-clamp-1">{item.description}</p>
+              </div>
             </article>
           ))}
         </div>
