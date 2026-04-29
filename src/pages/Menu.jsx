@@ -1,43 +1,79 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useRef } from 'react';
 import MenuItemGrid from '../components/MenuItemGrid';
 import { IDLY_VADA, DOSA_UTHAPAM, SNACKS_TIFFIN, SWEETS_DRINKS } from '../data/mock';
 
-const tabs = [
-  { name: 'DOSA', path: '/menu/dosas', label: 'Dosa & Uthapam', items: DOSA_UTHAPAM },
-  { name: 'IDLY', path: '/menu/idly', label: 'Idly & Vada', items: IDLY_VADA },
-  { name: 'SNACKS', path: '/menu/snacks', label: 'Snacks & Tiffin', items: SNACKS_TIFFIN },
-  { name: 'SWEETS', path: '/menu/sweets', label: 'Sweets & Drinks', items: SWEETS_DRINKS },
+const categories = [
+  { id: 'dosas', name: 'DOSA & UTHAPAM', label: 'Dosa & Uthapam', items: DOSA_UTHAPAM, image: DOSA_UTHAPAM[0].image },
+  { id: 'idly', name: 'IDLY & VADA', label: 'Idly & Vada', items: IDLY_VADA, image: IDLY_VADA[0].image },
+  { id: 'snacks', name: 'SNACKS & TIFFIN', label: 'Snacks & Tiffin', items: SNACKS_TIFFIN, image: SNACKS_TIFFIN[0].image },
+  { id: 'sweets', name: 'SWEETS & DRINKS', label: 'Sweets & Drinks', items: SWEETS_DRINKS, image: SWEETS_DRINKS[0].image },
 ];
 
-const Menu = ({ section = 'dosas' }) => {
-  const { pathname } = useLocation();
-  const activeTab = tabs.find((t) => pathname.includes(t.path.split('/')[2])) || tabs[0];
+const Card = ({ title, image, count, onClick }) => (
+  <button onClick={onClick} className="group relative block overflow-hidden bg-[#f6e0b0] w-full text-left">
+    <div className="aspect-[4/5]">
+      <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+    </div>
+    <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white">
+      <h3 className="font-display font-black text-2xl md:text-3xl tracking-tight">{title}</h3>
+      <p className="text-xs font-display tracking-widest opacity-90 mt-1">{count} ITEMS →</p>
+    </div>
+  </button>
+);
+
+const Menu = () => {
+  const sectionRefs = useRef({});
+
+  const scrollToSection = (id) => {
+    const element = sectionRefs.current[id];
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
-    <div>
-      {/* Tabs sub-nav */}
-      <div className="bg-[#1a5e3a] paper-texture border-t border-white/30">
-        <div className="max-w-5xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center gap-3 md:gap-6">
-          {tabs.map((t) => {
-            const isActive = activeTab.name === t.name;
-            return (
-              <Link
-                key={t.path}
-                to={t.path}
-                className={`font-display font-bold tracking-widest text-sm md:text-base px-4 py-2 transition-all ${
-                  isActive
-                    ? 'bg-white text-[#1a5e3a]'
-                    : 'text-white hover:bg-white/20'
-                }`}
-              >
-                {t.name}
-              </Link>
-            );
-          })}
-        </div>
+    <div className="bg-white">
+      {/* Header Section */}
+      <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
+        <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">THE MENU</h1>
+        <p className="font-script text-white text-2xl md:text-4xl mt-3">Authentic Flavors, Delivered</p>
+      </section>
+
+      {/* Categories Grid */}
+      <section className="max-w-7xl mx-auto py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 paper-texture">
+        {categories.map((cat) => (
+          <Card 
+            key={cat.id}
+            title={cat.name} 
+            image={cat.image} 
+            count={cat.items.length} 
+            onClick={() => scrollToSection(cat.id)}
+          />
+        ))}
+      </section>
+
+      {/* Menu Items Sections */}
+      <div className="pb-12">
+        {categories.map((cat, idx) => (
+          <div 
+            key={cat.id} 
+            ref={(el) => (sectionRefs.current[cat.id] = el)}
+            className="scroll-mt-24"
+          >
+            <MenuItemGrid 
+              items={cat.items} 
+              label={cat.label} 
+            />
+          </div>
+        ))}
       </div>
-      <MenuItemGrid items={activeTab.items} label={activeTab.label} />
     </div>
   );
 };

@@ -4,12 +4,10 @@ import { useToast } from '../hooks/use-toast';
 import { LOCATIONS } from '../data/mock';
 
 const MenuItemGrid = ({ items, label }) => {
-  const { toast } = useToast();
-
   return (
-    <section className="bg-[#f6e0b0] paper-texture py-16 md:py-24 px-6">
+    <section className="bg-[#f6e0b0] paper-texture py-8 md:py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h1 className="font-script text-[#1a5e3a] text-6xl md:text-8xl leading-none">{label}</h1>
         </div>
 
@@ -35,25 +33,6 @@ const MenuItemGrid = ({ items, label }) => {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* Choose location */}
-        <div className="max-w-md mx-auto mt-20 text-center">
-          <label className="block font-display tracking-widest text-neutral-700 text-sm mb-3">CHOOSE LOCATION:</label>
-          <select
-            onChange={(e) => {
-              if (e.target.value) toast({ title: 'Location selected', description: e.target.options[e.target.selectedIndex].text });
-            }}
-            className="w-full px-4 py-3 border-2 border-neutral-300 bg-white text-neutral-800 focus:outline-none focus:border-[#1a5e3a] transition-colors"
-          >
-            <option value="">Choose Location:</option>
-            {LOCATIONS.map((loc) => (
-              <option key={loc.id} value={loc.id}>{loc.name}</option>
-            ))}
-          </select>
-          <Link to="/locations" className="inline-block mt-6 text-sm font-display tracking-widest text-[#1a5e3a] hover:text-[#4CAFAE] underline underline-offset-4">
-            VIEW ALL LOCATIONS
-          </Link>
         </div>
       </div>
     </section>

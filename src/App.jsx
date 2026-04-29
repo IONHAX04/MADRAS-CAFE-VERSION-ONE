@@ -28,11 +28,7 @@ function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<MenuLanding />} />
-            <Route path="/menu/dosas" element={<Menu />} />
-            <Route path="/menu/idly" element={<Menu />} />
-            <Route path="/menu/sweets" element={<Menu />} />
-            <Route path="/menu/snacks" element={<Menu />} />
+            <Route path="/menu" element={<Menu />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/catering" element={<Catering />} />
             <Route path="/social" element={<Social />} />
