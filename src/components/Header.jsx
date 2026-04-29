@@ -47,19 +47,42 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile drawer */}
+        {/* Mobile menu overlay */}
         {open && (
-          <div className="lg:hidden pb-6 flex flex-col items-center gap-4 animate-in fade-in slide-in-from-top-2 duration-200">
-            {[...NAV_LEFT, ...NAV_RIGHT].map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                onClick={() => setOpen(false)}
-                className={linkBase}
-              >
-                {item.name}
-              </NavLink>
-            ))}
+          <div className="fixed inset-0 z-[100] bg-[#fdfaf5] lg:hidden animate-in fade-in duration-300">
+            <div className="p-6 h-full flex flex-col">
+              <div className="flex items-center justify-between">
+                <Logo size="h-16" />
+                <button
+                  onClick={() => setOpen(false)}
+                  className="w-10 h-10 rounded-full bg-[#1a5e3a] flex items-center justify-center text-[#f4b700] shadow-lg transition-transform hover:scale-110 active:scale-95"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+              
+              <nav className="mt-16 flex flex-col gap-6 px-4">
+                {[...NAV_LEFT, ...NAV_RIGHT].map((item, idx) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setOpen(false)}
+                    className="text-[#1a5e3a] font-display font-black text-5xl tracking-tight uppercase hover:text-[#f4b700] transition-colors"
+                    style={{ animationDelay: `${idx * 100}ms` }}
+                  >
+                    <span className="inline-block animate-in slide-in-from-left-8 duration-500 fill-mode-both">
+                      {item.name}
+                    </span>
+                  </NavLink>
+                ))}
+              </nav>
+
+              <div className="mt-auto pb-10 px-4">
+                <p className="text-[#1a5e3a]/40 font-display font-bold tracking-widest text-xs uppercase">
+                  © Madras Cafe since 1962
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>
