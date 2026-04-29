@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MenuItemGrid from '../components/MenuItemGrid';
-import { CONES, SHAKES, SUNDAES, SANDWICHES } from '../data/mock';
+import { IDLY_VADA, DOSA_UTHAPAM, SNACKS_TIFFIN, SWEETS_DRINKS } from '../data/mock';
 
 const tabs = [
-  { name: 'DOSAS', path: '/menu/dosas', label: 'Dosas', items: CONES },
-  { name: 'BEVERAGES', path: '/menu/beverages', label: 'Beverages', items: SHAKES },
-  { name: 'SWEETS', path: '/menu/sweets', label: 'Sweets', items: SUNDAES },
-  { name: 'SNACKS', path: '/menu/snacks', label: 'Snacks', items: SANDWICHES },
+  { name: 'DOSA', path: '/menu/dosas', label: 'Dosa & Uthapam', items: DOSA_UTHAPAM },
+  { name: 'IDLY', path: '/menu/idly', label: 'Idly & Vada', items: IDLY_VADA },
+  { name: 'SNACKS', path: '/menu/snacks', label: 'Snacks & Tiffin', items: SNACKS_TIFFIN },
+  { name: 'SWEETS', path: '/menu/sweets', label: 'Sweets & Drinks', items: SWEETS_DRINKS },
 ];
 
 const Menu = ({ section = 'dosas' }) => {

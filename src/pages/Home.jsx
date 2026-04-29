@@ -5,6 +5,16 @@ import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import banner4 from '../assets/banners/BANNER4.jpg';
 import banner5 from '../assets/banners/BANNER5.jpg';
 import banner6 from '../assets/banners/BANNER6.jpg';
+import f11 from '../assets/images/food11.jpg';
+import f15 from '../assets/images/food15.jpg';
+import g1 from '../assets/gallery/gallery1.png';
+import g2 from '../assets/gallery/gallery2.png';
+import g3 from '../assets/gallery/gallery3.png';
+import g4 from '../assets/gallery/gallery4.png';
+import g5 from '../assets/gallery/gallery5.png';
+import g6 from '../assets/gallery/gallery6.png';
+import g7 from '../assets/gallery/gallery7.png';
+import g8 from '../assets/gallery/gallery8.png';
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
@@ -106,6 +116,74 @@ const Home = () => {
       {/* Big banner image */}
       <section className="bg-[#1a5e3a]">
         <img src={banner5} alt="Madras Cafe banner" className="w-full block" />
+      </section>
+
+      {/* Gallery Collage */}
+      <section className="bg-[#f6e0b0] paper-texture py-24 px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight mb-4">OUR GALLERY</h2>
+            <div className="h-1.5 w-32 bg-[#1a5e3a] mx-auto"></div>
+            <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-6">A Taste of Tradition in Every Frame</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[300px]">
+            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g1} alt="South Indian Platter" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g2} alt="Filter Coffee" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g3} alt="Indian Sweets" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g4} alt="Cafe Ambiance" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+          </div>
+
+          {/* Section 2: Culinary Process & Snacks */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[250px] mt-4">
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g5} alt="Dosa Process" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g8} alt="Chef Action" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g6} alt="South Indian Snacks" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+          </div>
+
+          {/* Section 3: Drinks & Social */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px] mt-4">
+            <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={g7} alt="Refreshing Drinks" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={f11} alt="Food Close-up 1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img src={f15} alt="Sweets Close-up" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <a href="https://instagram.com/madrascafe" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-[#1a5e3a] text-white hover:bg-[#4CAFAE] px-10 py-4 font-display font-bold tracking-widest text-sm transition-all transform hover:-translate-y-1">
+              FOLLOW US ON INSTAGRAM
+            </a>
+          </div>
+        </div>
       </section>
 
     </div>

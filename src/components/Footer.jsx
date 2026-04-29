@@ -84,6 +84,7 @@ const Footer = () => {
             <Link to="/accessibility" className="hover:opacity-70 transition-opacity">ACCESSIBILITY</Link>
             <Link to="/privacy" className="hover:opacity-70 transition-opacity">PRIVACY POLICY</Link>
             <Link to="/terms" className="hover:opacity-70 transition-opacity">LEGAL TERMS AND CONDITIONS</Link>
+            <Link to="/imprint" className="hover:opacity-70 transition-opacity">IMPRINT</Link>
           </div>
 
           <p className="text-xs md:text-sm tracking-wide opacity-90">A proud member of the CFA</p>

@@ -63,75 +63,213 @@ export const HERO_SLIDES = [
   },
 ];
 
-export const CONES = [
+export const IDLY_VADA = [
   {
-    id: 'masala-dosa',
-    name: 'MASALA DOSA',
-    description: 'Crispy crepe made from rice and lentils, filled with potato masala.',
-    image: f1,
-  },
-  {
-    id: 'idli-sambar',
-    name: 'IDLI SAMBAR',
-    description: 'Soft steamed rice cakes served with lentil soup and coconut chutney.',
+    id: 'idly-2',
+    name: 'IDLY 2 PIECES',
+    description: 'Soft steamed rice cakes served with sambar and chutneys.',
     image: f2,
   },
   {
-    id: 'vada',
-    name: 'MEDU VADA',
+    id: 'sambar-idly',
+    name: 'SAMBAR IDLY',
+    description: 'Idly soaked in aromatic sambar.',
+    image: f12,
+  },
+  {
+    id: 'podi-idly',
+    name: 'PODI IDLY',
+    description: 'Bite-sized idlies tossed in spicy lentil powder.',
+    image: f13,
+  },
+  {
+    id: 'ghee-podi-idly',
+    name: 'GHEE PODI IDLY',
+    description: 'Podi idly topped with aromatic ghee.',
+    image: f14,
+  },
+  {
+    id: 'medhu-vada',
+    name: 'MEDHU VADA',
     description: 'Crispy deep-fried lentil donuts served with sambar.',
     image: f3,
   },
   {
-    id: 'uttapam',
-    name: 'ONION UTTAPAM',
-    description: 'Thick pancake topped with onions, tomatoes, and green chilies.',
+    id: 'sambar-vada',
+    name: 'SAMBAR VADA',
+    description: 'Medhu vada soaked in sambar.',
+    image: f11,
+  }
+];
+
+export const DOSA_UTHAPAM = [
+  {
+    id: 'plain-dosa',
+    name: 'PLAIN DOSA',
+    description: 'Thin crispy rice and lentil crepe.',
+    image: f1,
+  },
+  {
+    id: 'masal-dosa',
+    name: 'MASAL DOSA',
+    description: 'Dosa stuffed with spiced potato masala.',
+    image: f19,
+  },
+  {
+    id: 'mysore-masal',
+    name: 'MYSORE MASAL DOSA',
+    description: 'Dosa with spicy Mysore chutney and potato filling.',
+    image: f20,
+  },
+  {
+    id: 'podi-dosa',
+    name: 'PODI DOSA',
+    description: 'Dosa sprinkled with spicy lentil powder.',
+    image: f1,
+  },
+  {
+    id: 'onion-dosa',
+    name: 'ONION DOSA',
+    description: 'Dosa topped with finely chopped onions.',
+    image: f1,
+  },
+  {
+    id: 'panner-dosa',
+    name: 'PANNER DOSA',
+    description: 'Dosa stuffed with spiced paneer.',
+    image: f1,
+  },
+  {
+    id: 'mushroom-masal',
+    name: 'MUSHROOM MASAL DOSA',
+    description: 'Dosa with spiced mushroom filling.',
+    image: f1,
+  },
+  {
+    id: 'garlic-chutney',
+    name: 'GARLIC CHUTNY DOSA',
+    description: 'Dosa spread with spicy garlic chutney.',
+    image: f1,
+  },
+  {
+    id: 'plain-uthapam',
+    name: 'PLAIN UTHAPAM',
+    description: 'Thick rice and lentil pancake.',
+    image: f4,
+  },
+  {
+    id: 'onion-uthapam',
+    name: 'ONION UTHAPAM',
+    description: 'Uthapam topped with onions.',
+    image: f4,
+  },
+  {
+    id: 'podi-uthapam',
+    name: 'PODI UTHAPAM',
+    description: 'Uthapam topped with spicy podi.',
+    image: f4,
+  },
+  {
+    id: 'mc-spl-uthapam',
+    name: 'MC SPL UTAPAM',
+    description: 'Special Madras Cafe uthapam with mixed toppings.',
     image: f4,
   }
 ];
 
-export const SHAKES = [
+export const SNACKS_TIFFIN = [
   {
-    id: 'filter-coffee',
-    name: 'FILTER COFFEE',
-    description: 'Authentic South Indian filter coffee made with milk and decoction.',
-    image: f5,
+    id: 'valakka-bhajji',
+    name: 'VALAKKA BHAJJI',
+    description: 'Plantain fritters dipped in gram flour batter.',
+    image: f10,
   },
   {
-    id: 'badam-milk',
-    name: 'BADAM MILK',
-    description: 'Warm almond milk flavored with cardamom and saffron.',
-    image: f6,
+    id: 'onion-bajji',
+    name: 'ONION BAJJI',
+    description: 'Crispy onion fritters.',
+    image: f10,
+  },
+  {
+    id: 'molaka-bajji',
+    name: 'MOLAKA BAJJI',
+    description: 'Spicy chili fritters.',
+    image: f10,
+  },
+  {
+    id: 'aloo-bonda',
+    name: 'ALOO BONDA',
+    description: 'Spiced potato balls dipped in batter and deep fried.',
+    image: f9,
+  },
+  {
+    id: 'chapati',
+    name: 'CHAPATI',
+    description: 'Whole wheat flatbread served with curry.',
+    image: f21,
+  },
+  {
+    id: 'parotta',
+    name: 'PAROTTA',
+    description: 'Layered flaky flatbread.',
+    image: f21,
   }
 ];
 
-export const SUNDAES = [
+export const SWEETS_DRINKS = [
   {
-    id: 'gulab-jamun',
-    name: 'GULAB JAMUN',
+    id: 'gulab-jamoon',
+    name: 'GULAB JAMOON',
     description: 'Soft milk dumplings soaked in rose-flavored sugar syrup.',
     image: f7,
   },
   {
-    id: 'payasam',
-    name: 'PAYASAM',
-    description: 'Traditional sweet pudding made with rice, milk, jaggery and nuts.',
-    image: f8,
-  }
-];
-
-export const SANDWICHES = [
-  {
-    id: 'bonda',
-    name: 'MYSORE BONDA',
-    description: 'Deep fried snack made with urad dal, crispy outside and soft inside.',
-    image: f9,
+    id: 'ladoo',
+    name: 'LADOO',
+    description: 'Traditional Indian sweet balls.',
+    image: f15,
   },
   {
-    id: 'bajji',
-    name: 'PLANTAIN BAJJI',
-    description: 'Slices of plantain dipped in gram flour batter and deep fried.',
-    image: f10,
+    id: 'tea',
+    name: 'TEA',
+    description: 'Authentic masala tea.',
+    image: f5,
+  },
+  {
+    id: 'filter-coffee',
+    name: 'FILTER COFFEE',
+    description: 'Authentic South Indian filter coffee.',
+    image: f5,
+  },
+  {
+    id: 'falooda',
+    name: 'FALOODA',
+    description: 'Cold dessert with noodles, syrup and ice cream.',
+    image: f16,
+  },
+  {
+    id: 'butter-milk',
+    name: 'BUTTER MILK',
+    description: 'Refreshing spiced yogurt drink.',
+    image: f17,
+  },
+  {
+    id: 'lemon-soda',
+    name: 'LEMON SODA',
+    description: 'Zesty lemon soda.',
+    image: f17,
+  },
+  {
+    id: 'lassi',
+    name: 'LASSI',
+    description: 'Sweet or salted yogurt drink.',
+    image: f18,
+  },
+  {
+    id: 'rose-milk',
+    name: 'ROSE MILK',
+    description: 'Chilled milk flavored with rose syrup.',
+    image: f18,
   }
 ];
 
@@ -178,3 +316,4 @@ export const PROMO_TILES = [
     link: '/menu',
   },
 ];
+
