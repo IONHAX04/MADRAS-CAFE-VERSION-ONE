@@ -25,6 +25,10 @@
   letter-spacing: 0.01em;
 }
 
+.font-hero-header {
+  font-family: 'Playwrite NZ Guides', cursive;
+}
+
 /* Logo styling */
 .sj-logo span {
   font-family: 'Oswald', 'Roboto Condensed', sans-serif;

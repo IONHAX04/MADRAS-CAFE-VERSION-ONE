@@ -25,28 +25,22 @@ const Home = () => {
   const NEW_HERO_SLIDES = [
     {
       id: 1,
-      title_start: 'CRISPY',
-      title_highlight: 'SOUTH INDIAN',
-      title_end: 'SNACKS',
-      subtitle: 'Authentic tradition in every bite.',
+      subtitle_white: 'Authentic tradition in',
+      subtitle_yellow: 'every bite.',
       image: hb1,
       link: '/menu',
     },
     {
       id: 2,
-      title_start: 'THE PERFECT',
-      title_highlight: 'MASALA',
-      title_end: 'DOSA',
-      subtitle: 'Thin, golden and perfectly spiced.',
+      subtitle_white: 'Thin, golden and',
+      subtitle_yellow: 'perfectly spiced.',
       image: hb2,
       link: '/menu',
     },
     {
       id: 3,
-      title_start: 'SIGNATURE',
-      title_highlight: 'SAMBAR',
-      title_end: 'IDLY',
-      subtitle: 'Soft cakes with secret spices.',
+      subtitle_white: 'Soft cakes with',
+      subtitle_yellow: 'secret spices.',
       image: hb3,
       link: '/menu',
     }
@@ -81,13 +75,9 @@ const Home = () => {
               </div>
               <div className="absolute inset-x-0 top-20 md:top-8 flex flex-col items-center text-center px-6 z-20">
 
-                <h1 className="font-display font-black text-white text-5xl md:text-5xl lg:text-6xl tracking-tighter drop-shadow-2xl uppercase leading-[0.9] italic">
-                  {slide.title_start} <br className="md:hidden" />
-                  <span className="text-[#f4b700]">{slide.title_highlight}</span> <br className="md:hidden" />
-                  {slide.title_end}
-                </h1>
-                <p className="text-[#f4b700] font-display font-black tracking-[0.3em] mt-6 text-xl md:text-2xl uppercase drop-shadow-md">
-                  {slide.subtitle}
+                <p className="font-hero-header font-bold mt-6 text-2xl md:text-6xl drop-shadow-md leading-tight">
+                  <span className="text-white">{slide.subtitle_white}</span> <br className="md:hidden" />
+                  <span className="text-[#f4b700]">{slide.subtitle_yellow}</span>
                 </p>
               </div>
 
