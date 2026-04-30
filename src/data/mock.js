@@ -41,6 +41,21 @@ import plainUthappamImg from '../assets/menu/plain-uthappam.jpg';
 import onionUthappamImg from '../assets/menu/onion-uthappam.jpg';
 import podiUthappamImg from '../assets/menu/podi-uthappam.jpg';
 import mcSplUthappamImg from '../assets/menu/mc-spl-uthappam.jpg';
+import valakkaBajjiImg from '../assets/menu/valakka-bajji.jpg';
+import onionBajjiImg from '../assets/menu/onion-bajji.jpg';
+import molakaBajjiImg from '../assets/menu/molaka-bajji.jpg';
+import alooBondaImg from '../assets/menu/aloo-bonda.jpg';
+import chapathiImg from '../assets/menu/chappathi.jpg';
+import parottaImg from '../assets/menu/parotta.jpg';
+import gulabJamunImg from '../assets/menu/gulab-jamun.jpg';
+import ladduImg from '../assets/menu/laddu.jpg';
+import teaImg from '../assets/menu/tea.jpg';
+import filterCoffeeMenuImg from '../assets/menu/filter-coffee.jpg';
+import faloodaImg from '../assets/menu/falooda.jpg';
+import butterMilkImg from '../assets/menu/butter-milk.jpg';
+import lemonSodaImg from '../assets/menu/lemon-soda.jpg';
+import lassiImg from '../assets/menu/lassi.jpg';
+import roseMilkImg from '../assets/menu/rose-milk.jpg';
 
 
 import authenticDosa from "../assets/home/authentic-dosa.jpeg";
@@ -205,37 +220,37 @@ export const SNACKS_TIFFIN = [
     id: 'valakka-bhajji',
     name: 'VALAKKA BHAJJI',
     description: 'Plantain fritters dipped in gram flour batter.',
-    image: f10,
+    image: valakkaBajjiImg,
   },
   {
     id: 'onion-bajji',
     name: 'ONION BAJJI',
     description: 'Crispy onion fritters.',
-    image: f10,
+    image: onionBajjiImg,
   },
   {
     id: 'molaka-bajji',
     name: 'MOLAKA BAJJI',
     description: 'Spicy chili fritters.',
-    image: f10,
+    image: molakaBajjiImg,
   },
   {
     id: 'aloo-bonda',
     name: 'ALOO BONDA',
     description: 'Spiced potato balls dipped in batter and deep fried.',
-    image: f9,
+    image: alooBondaImg,
   },
   {
     id: 'chapati',
     name: 'CHAPATI',
     description: 'Whole wheat flatbread served with curry.',
-    image: f21,
+    image: chapathiImg,
   },
   {
     id: 'parotta',
     name: 'PAROTTA',
     description: 'Layered flaky flatbread.',
-    image: f21,
+    image: parottaImg,
   }
 ];
 
@@ -244,55 +259,55 @@ export const SWEETS_DRINKS = [
     id: 'gulab-jamoon',
     name: 'GULAB JAMOON',
     description: 'Soft milk dumplings soaked in rose-flavored sugar syrup.',
-    image: f7,
+    image: gulabJamunImg,
   },
   {
     id: 'ladoo',
     name: 'LADOO',
     description: 'Traditional Indian sweet balls.',
-    image: f15,
+    image: ladduImg,
   },
   {
     id: 'tea',
     name: 'TEA',
     description: 'Authentic masala tea.',
-    image: f5,
+    image: teaImg,
   },
   {
     id: 'filter-coffee',
     name: 'FILTER COFFEE',
     description: 'Authentic South Indian filter coffee.',
-    image: f5,
+    image: filterCoffeeMenuImg,
   },
   {
     id: 'falooda',
     name: 'FALOODA',
     description: 'Cold dessert with noodles, syrup and ice cream.',
-    image: f16,
+    image: faloodaImg,
   },
   {
     id: 'butter-milk',
     name: 'BUTTER MILK',
     description: 'Refreshing spiced yogurt drink.',
-    image: f17,
+    image: butterMilkImg,
   },
   {
     id: 'lemon-soda',
     name: 'LEMON SODA',
     description: 'Zesty lemon soda.',
-    image: f17,
+    image: lemonSodaImg,
   },
   {
     id: 'lassi',
     name: 'LASSI',
     description: 'Sweet or salted yogurt drink.',
-    image: f18,
+    image: lassiImg,
   },
   {
     id: 'rose-milk',
     name: 'ROSE MILK',
     description: 'Chilled milk flavored with rose syrup.',
-    image: f18,
+    image: roseMilkImg,
   }
 ];
 

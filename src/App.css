@@ -1,7 +1,7 @@
 /* Madras Cafe Clone styles */
 
 .App {
-  font-family: 'Roboto Condensed', 'Oswald', system-ui, -apple-system, sans-serif;
+  font-family: 'Noto Serif', system-ui, -apple-system, sans-serif;
   color: #2a2a2a;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .font-display {
-  font-family: 'Oswald', 'Roboto Condensed', system-ui, sans-serif;
+  font-family: 'Noto Serif', system-ui, sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -25,8 +25,16 @@
   letter-spacing: 0.01em;
 }
 
-.font-hero-header {
+.font-display-header {
   font-family: 'Playwrite NZ Guides', cursive;
+}
+
+.font-nav {
+  font-family: 'Noto Serif', serif;
+}
+
+button {
+  font-family: 'Noto Serif', serif;
 }
 
 /* Logo styling */

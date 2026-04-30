@@ -25,22 +25,25 @@ const Home = () => {
   const NEW_HERO_SLIDES = [
     {
       id: 1,
-      subtitle_white: 'Authentic tradition in',
-      subtitle_yellow: 'every bite.',
+      subtitle_start: 'Authentic',
+      subtitle_mid: 'tradition in',
+      subtitle_end: 'every bite.',
       image: hb1,
       link: '/menu',
     },
     {
       id: 2,
-      subtitle_white: 'Thin, golden and',
-      subtitle_yellow: 'perfectly spiced.',
+      subtitle_start: 'Thin, golden',
+      subtitle_mid: 'and perfectly',
+      subtitle_end: 'spiced.',
       image: hb2,
       link: '/menu',
     },
     {
       id: 3,
-      subtitle_white: 'Soft cakes with',
-      subtitle_yellow: 'secret spices.',
+      subtitle_start: 'Soft cakes',
+      subtitle_mid: 'with secret',
+      subtitle_end: 'spices.',
       image: hb3,
       link: '/menu',
     }
@@ -69,15 +72,14 @@ const Home = () => {
               <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
                 <img
                   src={slide.image}
-                  alt={slide.title_start}
+                  alt={slide.subtitle_start}
                   className={`w-auto h-[50%] md:h-[75%] object-contain object-bottom origin-bottom transition-transform duration-[4000ms] ease-out ${idx === current ? 'scale-[1.7] md:scale-110 translate-y-2 md:translate-y-0' : 'scale-100 translate-y-0'}`}
                 />
               </div>
               <div className="absolute inset-x-0 top-20 md:top-8 flex flex-col items-center text-center px-6 z-20">
-
-                <p className="font-hero-header font-bold mt-6 text-2xl md:text-6xl drop-shadow-md leading-tight">
-                  <span className="text-white">{slide.subtitle_white}</span> <br className="md:hidden" />
-                  <span className="text-[#f4b700]">{slide.subtitle_yellow}</span>
+                <p className="font-display-header mt-6 text-5xl md:text-7xl drop-shadow-md leading-tight">
+                  <span className="text-white">{slide.subtitle_start} {slide.subtitle_mid}</span> <br className="md:hidden" />
+                  <span className="text-[#f4b700]">{slide.subtitle_end}</span>
                 </p>
               </div>
 
@@ -106,6 +108,7 @@ const Home = () => {
       <div className="relative z-10">
         {/* Soft Serve Heading */}
         <section className="bg-[#1a5e3a] paper-texture pt-16 pb-0 px-6 text-center border-t-8 border-[#f4b700] shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
+          <p className="font-display font-bold text-[#f4b700] text-4xl md:text-3xl mt-1 uppercase tracking-widest">ZURICH</p>
           <h2 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">SOUTH INDIAN</h2>
           <p className="font-display font-bold text-[#f4b700] text-xl md:text-3xl mt-4 uppercase tracking-widest">Check Out The Menu</p>
         </section>
@@ -117,7 +120,7 @@ const Home = () => {
             <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[500px] object-cover rounded-md shadow-2xl" />
           </div>
           <div className="text-center pb-16 px-6">
-            <Link to="/menu" className="inline-block bg-[#f6e0b0] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-colors">
+            <Link to="/menu" className="inline-block bg-[#f6e0b0] text-[#1a5e3a] hover:bg-white px-10 py-4 font-nav font-bold tracking-widest text-sm transition-colors">
               VIEW THE FULL MENU
             </Link>
           </div>
@@ -134,7 +137,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                   <h3 className="font-display font-black text-2xl tracking-tight">{tile.title}</h3>
-                  <p className="font-display tracking-widest text-xs mt-2 group-hover:underline underline-offset-4">{tile.cta} →</p>
+                  <p className="font-nav tracking-widest text-xs mt-2 group-hover:underline underline-offset-4">{tile.cta} →</p>
                 </div>
               </Link>
             ))}

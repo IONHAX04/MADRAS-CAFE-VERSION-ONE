@@ -7,7 +7,7 @@ import { NAV_LEFT, NAV_RIGHT } from '../data/mock';
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const linkBase = 'text-[#1a5e3a] font-display font-bold tracking-widest text-sm xl:text-base hover:opacity-70 transition-opacity';
+  const linkBase = 'text-[#1a5e3a] font-nav font-bold tracking-widest text-sm xl:text-base hover:opacity-70 transition-opacity';
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
@@ -67,7 +67,7 @@ const Header = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setOpen(false)}
-                    className="text-[#1a5e3a] font-display font-black text-5xl tracking-tight uppercase hover:text-[#f4b700] transition-colors"
+                    className="text-[#1a5e3a] font-nav font-black text-5xl tracking-tight uppercase hover:text-[#f4b700] transition-colors"
                     style={{ animationDelay: `${idx * 100}ms` }}
                   >
                     <span className="inline-block animate-in slide-in-from-left-8 duration-500 fill-mode-both">
