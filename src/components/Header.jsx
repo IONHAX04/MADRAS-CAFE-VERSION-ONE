@@ -79,7 +79,7 @@ const Header = () => {
 
               <div className="mt-auto pb-10 px-4">
                 <p className="text-[#1a5e3a]/40 font-display font-bold tracking-widest text-xs uppercase">
-                  © Madras Cafe since 1962
+                  © Madras Cafe
                 </p>
               </div>
             </div>

@@ -24,6 +24,17 @@ import f19 from '../assets/images/food19.jpeg';
 import f20 from '../assets/images/food20.jpeg';
 import f21 from '../assets/images/food21.jpeg';
 
+import d1 from '../assets/menu/plain-dosa.jpg';
+import d2 from '../assets/menu/masal-dosa.jpg';
+import d3 from '../assets/menu/mysore-masal-dosa.jpg';
+import d4 from '../assets/menu/podi-dosa.jpg';
+import d5 from '../assets/menu/onion-dosa.jpg';
+
+
+import authenticDosa from "../assets/home/authentic-dosa.jpeg";
+import bookCatering from "../assets/home/catering.jpeg";
+import filterCoffee from "../assets/home/filter-coffee.jpeg";
+
 export const NAV_LEFT = [
   { name: 'HOME', path: '/' },
   { name: 'MENU', path: '/menu' },
@@ -107,49 +118,49 @@ export const DOSA_UTHAPAM = [
     id: 'plain-dosa',
     name: 'PLAIN DOSA',
     description: 'Thin crispy rice and lentil crepe.',
-    image: f1,
+    image: d1,
   },
   {
     id: 'masal-dosa',
     name: 'MASAL DOSA',
     description: 'Dosa stuffed with spiced potato masala.',
-    image: f19,
+    image: d2,
   },
   {
     id: 'mysore-masal',
     name: 'MYSORE MASAL DOSA',
     description: 'Dosa with spicy Mysore chutney and potato filling.',
-    image: f20,
+    image: d3,
   },
   {
     id: 'podi-dosa',
     name: 'PODI DOSA',
     description: 'Dosa sprinkled with spicy lentil powder.',
-    image: f1,
+    image: d4,
   },
   {
     id: 'onion-dosa',
     name: 'ONION DOSA',
     description: 'Dosa topped with finely chopped onions.',
-    image: f1,
+    image: d5,
   },
   {
     id: 'panner-dosa',
     name: 'PANNER DOSA',
     description: 'Dosa stuffed with spiced paneer.',
-    image: f1,
+    image: d1,
   },
   {
     id: 'mushroom-masal',
     name: 'MUSHROOM MASAL DOSA',
     description: 'Dosa with spiced mushroom filling.',
-    image: f1,
+    image: d1,
   },
   {
     id: 'garlic-chutney',
     name: 'GARLIC CHUTNY DOSA',
     description: 'Dosa spread with spicy garlic chutney.',
-    image: f1,
+    image: d1,
   },
   {
     id: 'plain-uthapam',
@@ -298,19 +309,19 @@ export const INSTAGRAM_FEED = [
 
 export const PROMO_TILES = [
   {
-    image: f19,
+    image: authenticDosa,
     title: 'AUTHENTIC DOSAS',
     cta: 'CHECK OUT THE MENU',
     link: '/menu',
   },
   {
-    image: f20,
+    image: bookCatering,
     title: 'BOOK CATERING',
     cta: 'BRING THE PARTY',
     link: '/catering',
   },
   {
-    image: f21,
+    image: filterCoffee,
     title: 'TRY OUR FILTER COFFEE',
     cta: 'VIEW MENU',
     link: '/menu',

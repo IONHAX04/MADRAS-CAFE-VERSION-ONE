@@ -2,11 +2,16 @@ import React, { useRef } from 'react';
 import MenuItemGrid from '../components/MenuItemGrid';
 import { IDLY_VADA, DOSA_UTHAPAM, SNACKS_TIFFIN, SWEETS_DRINKS } from '../data/mock';
 
+import dosaImg from "../assets/menucard/dosa.jpg"
+import idlyImg from "../assets/menucard/idly.jpg"
+import snacksImg from "../assets/menucard/snacks.jpg"
+import sweetsImg from "../assets/menucard/sweets.jpg"
+
 const categories = [
-  { id: 'dosas', name: 'DOSA & UTHAPAM', label: 'Dosa & Uthapam', items: DOSA_UTHAPAM, image: DOSA_UTHAPAM[0].image },
-  { id: 'idly', name: 'IDLY & VADA', label: 'Idly & Vada', items: IDLY_VADA, image: IDLY_VADA[0].image },
-  { id: 'snacks', name: 'SNACKS & TIFFIN', label: 'Snacks & Tiffin', items: SNACKS_TIFFIN, image: SNACKS_TIFFIN[0].image },
-  { id: 'sweets', name: 'SWEETS & DRINKS', label: 'Sweets & Drinks', items: SWEETS_DRINKS, image: SWEETS_DRINKS[0].image },
+  { id: 'dosas', name: 'DOSA & UTHAPAM', label: 'Dosa & Uthapam', items: DOSA_UTHAPAM, image: dosaImg },
+  { id: 'idly', name: 'IDLY & VADA', label: 'Idly & Vada', items: IDLY_VADA, image: idlyImg },
+  { id: 'snacks', name: 'SNACKS & TIFFIN', label: 'Snacks & Tiffin', items: SNACKS_TIFFIN, image: snacksImg },
+  { id: 'sweets', name: 'SWEETS & DRINKS', label: 'Sweets & Drinks', items: SWEETS_DRINKS, image: sweetsImg },
 ];
 
 const Card = ({ title, image, count, onClick }) => (
