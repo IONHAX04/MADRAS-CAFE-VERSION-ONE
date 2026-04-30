@@ -59,8 +59,8 @@ const Home = () => {
 
   return (
     <div className="bg-[#f6e0b0] relative">
-      {/* Hero Section - Sticky Base */}
-      <section className="sticky top-0 h-[calc(100vh-80px)] md:h-[90vh] bg-[#1a5e3a] overflow-hidden z-0">
+      {/* Hero Section - Fixed height on mobile to avoid browser toolbar issues */}
+      <section className="relative md:sticky top-0 h-[650px] md:h-[90vh] bg-[#1a5e3a] overflow-hidden z-0">
         <div className="relative h-full w-full">
           {NEW_HERO_SLIDES.map((slide, idx) => (
             <div
@@ -79,7 +79,7 @@ const Home = () => {
                   className={`w-auto h-[50%] md:h-[75%] object-contain object-bottom origin-bottom transition-transform duration-[4000ms] ease-out ${idx === current ? 'scale-[1.7] md:scale-110 translate-y-2 md:translate-y-0' : 'scale-100 translate-y-0'}`}
                 />
               </div>
-              <div className="absolute inset-x-0 top-6 md:top-8 flex flex-col items-center text-center px-6 z-20">
+              <div className="absolute inset-x-0 top-20 md:top-8 flex flex-col items-center text-center px-6 z-20">
 
                 <h1 className="font-display font-black text-white text-5xl md:text-5xl lg:text-6xl tracking-tighter drop-shadow-2xl uppercase leading-[0.9] italic">
                   {slide.title_start} <br className="md:hidden" />
