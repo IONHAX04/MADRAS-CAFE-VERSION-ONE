@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Heart, Flame } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import banner4 from '../assets/home/menu1.jpeg';
 import banner5 from '../assets/home/secondary-banner.jpeg';
@@ -91,40 +91,6 @@ const Home = () => {
                 </p>
               </div>
 
-              {/* Floating Toppings (Icons) */}
-              <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                {/* Yummy Meal with Love */}
-                <div className={`absolute top-[15%] left-[10%] transition-all duration-1000 ${idx === current ? 'opacity-50 scale-100' : 'opacity-0 scale-50'}`}>
-                  <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-[#f4b700] flex flex-col items-center justify-center text-[#1a5e3a] shadow-2xl animate-bounce" style={{ animationDuration: '4s' }}>
-                    <span className="text-3xl md:text-5xl mb-[-10px]">🥘</span>
-                    <Heart size={20} fill="currentColor" className="text-red-500 animate-pulse" />
-                  </div>
-                </div>
-                {/* Yummy Curry with Sharing */}
-                <div className={`absolute bottom-[25%] right-[10%] transition-all duration-1000 delay-300 ${idx === current ? 'opacity-50 scale-100' : 'opacity-0 scale-50'}`}>
-                  <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white flex flex-col items-center justify-center text-[#1a5e3a] shadow-2xl animate-pulse" style={{ animationDuration: '6s' }}>
-                    <span className="text-3xl md:text-5xl">🍛</span>
-                    <span className="text-sm md:text-lg font-bold">Sharing</span>
-                  </div>
-                </div>
-                {/* Caring Hearts */}
-                <div className={`absolute top-[40%] right-[15%] transition-all duration-1000 delay-500 ${idx === current ? 'opacity-40 scale-100 rotate-12' : 'opacity-10 scale-0'}`}>
-                  <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#f4b700] flex items-center justify-center text-[#1a5e3a] shadow-xl animate-spin" style={{ animationDuration: '10s' }}>
-                    <span className="text-2xl md:text-4xl">🫂</span>
-                  </div>
-                </div>
-                {/* White Heart */}
-                <div className={`absolute bottom-[40%] left-[15%] transition-all duration-1000 delay-700 ${idx === current ? 'opacity-30 scale-100 -rotate-12' : 'opacity-10 scale-0'}`}>
-                  <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center text-red-500 shadow-xl animate-pulse" style={{ animationDuration: '3s' }}>
-                    <Heart size={30} className="w-5 h-5 md:w-8 md:h-8" fill="currentColor" />
-                  </div>
-                </div>
-                {/* Spicy Flame */}
-                <div className={`absolute top-[20%] right-[30%] transition-all duration-1000 delay-200 ${idx === current ? 'opacity-20 scale-100' : 'opacity-10 scale-0'}`}>
-                  <Flame size={40} className="text-[#f4b700]" fill="currentColor" />
-                </div>
-
-              </div>
             </div>
           ))}
 

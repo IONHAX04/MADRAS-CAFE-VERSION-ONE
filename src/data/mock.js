@@ -24,11 +24,23 @@ import f19 from '../assets/images/food19.jpeg';
 import f20 from '../assets/images/food20.jpeg';
 import f21 from '../assets/images/food21.jpeg';
 
-import d1 from '../assets/menu/plain-dosa.jpg';
-import d2 from '../assets/menu/masal-dosa.jpg';
-import d3 from '../assets/menu/mysore-masal-dosa.jpg';
-import d4 from '../assets/menu/podi-dosa.jpg';
-import d5 from '../assets/menu/onion-dosa.jpg';
+import plainDosa from '../assets/menu/plain-dosa.jpg';
+import masalDosa from '../assets/menu/masal-dosa.jpg';
+import mysoreMasalDosa from '../assets/menu/mysore-masal-dosa.jpg';
+import podiDosa from '../assets/menu/podi-dosa.jpg';
+import onionDosa from '../assets/menu/onion-dosa.jpg';
+import paneerDosa from '../assets/menu/paneer-dosa.jpg';
+import garlicDosa from '../assets/menu/garlic-dosa.jpg';
+import idlyImg from '../assets/menu/idly.jpg';
+import sambarIdlyImg from '../assets/menu/sambar-idly.jpg';
+import podiIdlyImg from '../assets/menu/podi-idly.jpg';
+import gheePodiIdlyImg from '../assets/menu/ghee-podi-idly.jpg';
+import medhuVadaiImg from '../assets/menu/medhu-vadai.jpg';
+import sambarVadaImg from '../assets/menu/sambar-vada.jpg';
+import plainUthappamImg from '../assets/menu/plain-uthappam.jpg';
+import onionUthappamImg from '../assets/menu/onion-uthappam.jpg';
+import podiUthappamImg from '../assets/menu/podi-uthappam.jpg';
+import mcSplUthappamImg from '../assets/menu/mc-spl-uthappam.jpg';
 
 
 import authenticDosa from "../assets/home/authentic-dosa.jpeg";
@@ -79,37 +91,37 @@ export const IDLY_VADA = [
     id: 'idly-2',
     name: 'IDLY 2 PIECES',
     description: 'Soft steamed rice cakes served with sambar and chutneys.',
-    image: f2,
+    image: idlyImg,
   },
   {
     id: 'sambar-idly',
     name: 'SAMBAR IDLY',
     description: 'Idly soaked in aromatic sambar.',
-    image: f12,
+    image: sambarIdlyImg,
   },
   {
     id: 'podi-idly',
     name: 'PODI IDLY',
     description: 'Bite-sized idlies tossed in spicy lentil powder.',
-    image: f13,
+    image: podiIdlyImg,
   },
   {
     id: 'ghee-podi-idly',
     name: 'GHEE PODI IDLY',
     description: 'Podi idly topped with aromatic ghee.',
-    image: f14,
+    image: gheePodiIdlyImg,
   },
   {
     id: 'medhu-vada',
     name: 'MEDHU VADA',
     description: 'Crispy deep-fried lentil donuts served with sambar.',
-    image: f3,
+    image: medhuVadaiImg,
   },
   {
     id: 'sambar-vada',
     name: 'SAMBAR VADA',
     description: 'Medhu vada soaked in sambar.',
-    image: f11,
+    image: sambarVadaImg,
   }
 ];
 
@@ -118,73 +130,73 @@ export const DOSA_UTHAPAM = [
     id: 'plain-dosa',
     name: 'PLAIN DOSA',
     description: 'Thin crispy rice and lentil crepe.',
-    image: d1,
+    image: plainDosa,
   },
   {
     id: 'masal-dosa',
     name: 'MASAL DOSA',
     description: 'Dosa stuffed with spiced potato masala.',
-    image: d2,
+    image: masalDosa,
   },
   {
     id: 'mysore-masal',
     name: 'MYSORE MASAL DOSA',
     description: 'Dosa with spicy Mysore chutney and potato filling.',
-    image: d3,
+    image: mysoreMasalDosa,
   },
   {
     id: 'podi-dosa',
     name: 'PODI DOSA',
     description: 'Dosa sprinkled with spicy lentil powder.',
-    image: d4,
+    image: podiDosa,
   },
   {
     id: 'onion-dosa',
     name: 'ONION DOSA',
     description: 'Dosa topped with finely chopped onions.',
-    image: d5,
+    image: onionDosa,
   },
   {
     id: 'panner-dosa',
     name: 'PANNER DOSA',
     description: 'Dosa stuffed with spiced paneer.',
-    image: d1,
+    image: paneerDosa,
   },
   {
     id: 'mushroom-masal',
     name: 'MUSHROOM MASAL DOSA',
     description: 'Dosa with spiced mushroom filling.',
-    image: d1,
+    image: plainDosa,
   },
   {
     id: 'garlic-chutney',
     name: 'GARLIC CHUTNY DOSA',
     description: 'Dosa spread with spicy garlic chutney.',
-    image: d1,
+    image: garlicDosa,
   },
   {
     id: 'plain-uthapam',
     name: 'PLAIN UTHAPAM',
     description: 'Thick rice and lentil pancake.',
-    image: f4,
+    image: plainUthappamImg,
   },
   {
     id: 'onion-uthapam',
     name: 'ONION UTHAPAM',
     description: 'Uthapam topped with onions.',
-    image: f4,
+    image: onionUthappamImg,
   },
   {
     id: 'podi-uthapam',
     name: 'PODI UTHAPAM',
     description: 'Uthapam topped with spicy podi.',
-    image: f4,
+    image: podiUthappamImg,
   },
   {
     id: 'mc-spl-uthapam',
     name: 'MC SPL UTAPAM',
     description: 'Special Madras Cafe uthapam with mixed toppings.',
-    image: f4,
+    image: mcSplUthappamImg,
   }
 ];
 
