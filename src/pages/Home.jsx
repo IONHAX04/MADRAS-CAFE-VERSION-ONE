@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
-import banner4 from '../assets/home/menu1.jpeg';
+import banner4 from '../assets/home/Home1.jpeg';
 import banner5 from '../assets/home/secondary-banner.jpeg';
-import banner6 from '../assets/home/menu2.jpeg';
-import hb1 from '../assets/home/banner1.png';
-import hb2 from '../assets/home/banner2.png';
-import hb3 from '../assets/home/banner3.png';
+import banner6 from '../assets/home/Home2.jpeg';
+import hb1 from '../assets/home/Banner1.jpeg';
+import hb2 from '../assets/home/Banner2.jpeg';
+import hb3 from '../assets/home/Banner3.jpeg';
 import f11 from '../assets/images/food11.jpg';
 import f15 from '../assets/images/food15.jpg';
 import g1 from '../assets/gallery/gallery1.png';
@@ -69,18 +69,30 @@ const Home = () => {
                 visibility: (idx <= current) ? 'visible' : 'hidden'
               }}
             >
-              <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
+              {/* Background Image/Element aligned to the right */}
+              <div className="absolute inset-0 flex items-center justify-end pointer-events-none overflow-hidden">
                 <img
                   src={slide.image}
                   alt={slide.subtitle_start}
-                  className={`w-auto h-[50%] md:h-[75%] object-contain object-bottom origin-bottom transition-transform duration-[4000ms] ease-out ${idx === current ? 'scale-[1.7] md:scale-110 translate-y-2 md:translate-y-0' : 'scale-100 translate-y-0'}`}
+                  className={`w-auto h-[70%] md:h-[90%] object-contain transition-transform duration-[6000ms] ease-out ${idx === current ? 'scale-110 translate-x-0' : 'scale-100 translate-x-20'}`}
                 />
               </div>
-              <div className="absolute inset-x-0 top-20 md:top-8 flex flex-col items-center text-center px-6 z-20">
-                <p className="font-display-header mt-6 text-5xl md:text-7xl drop-shadow-md leading-tight">
-                  <span className="text-white">{slide.subtitle_start} {slide.subtitle_mid}</span> <br className="md:hidden" />
-                  <span className="text-[#f4b700]">{slide.subtitle_end}</span>
-                </p>
+
+              {/* Content aligned to the left */}
+              <div className="absolute inset-0 flex items-center z-20 px-6 md:px-24">
+                <div className={`max-w-4xl transition-all duration-1000 delay-300 ${idx === current ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                  <h1 className="font-decorative text-white text-5xl md:text-8xl drop-shadow-2xl leading-[1.6] mb-8 flex flex-wrap gap-x-6 gap-y-2">
+                    <span className="border-b-2 border-white/40 pb-1">{slide.subtitle_start}</span>
+                    <span className="border-b-2 border-white/40 pb-1">{slide.subtitle_mid}</span>
+                    <span className="text-[#f4b700] border-b-2 border-[#f4b700]/40 pb-1">{slide.subtitle_end}</span>
+                  </h1>
+                  <Link
+                    to={slide.link}
+                    className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-nav font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-xl"
+                  >
+                    EXPLORE MENU
+                  </Link>
+                </div>
               </div>
 
             </div>
@@ -116,8 +128,8 @@ const Home = () => {
         {/* Cones row image */}
         <section className="bg-[#1a5e3a]">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-16 px-6">
-            <img src={banner4} alt="Madras Cafe authentic dosas" className="w-full h-[400px] md:h-[500px] object-cover rounded-md shadow-2xl" />
-            <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[500px] object-cover rounded-md shadow-2xl" />
+            <img src={banner4} alt="Madras Cafe authentic dosas" className="w-full h-[400px] md:h-[500px] object-cover rounded-md" />
+            <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[500px] object-cover rounded-md" />
           </div>
           <div className="text-center pb-16 px-6">
             <Link to="/menu" className="inline-block bg-[#f6e0b0] text-[#1a5e3a] hover:bg-white px-10 py-4 font-nav font-bold tracking-widest text-sm transition-colors">

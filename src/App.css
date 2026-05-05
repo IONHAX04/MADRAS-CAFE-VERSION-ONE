@@ -25,6 +25,14 @@
   letter-spacing: 0.01em;
 }
 
+.font-decorative {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-script-alt {
+  font-family: 'Marck Script', cursive;
+}
+
 .font-display-header {
   font-family: 'Playwrite NZ Guides', cursive;
 }
