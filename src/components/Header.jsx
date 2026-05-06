@@ -6,33 +6,44 @@ import { NAV_LEFT, NAV_RIGHT } from '../data/mock';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const linkBase = 'text-[#1a5e3a] font-nav font-bold tracking-widest text-sm xl:text-base hover:opacity-70 transition-opacity';
-  const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
+  const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'active' : ''}`;
 
   return (
-    <header className="sj-header sticky top-0 z-50 bg-[#f6e0b0] paper-texture border-b-2 border-[#1a5e3a]">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between">
+    <header 
+      className={`fixed top-0 inset-x-0 z-[1000] transition-all duration-500 bg-[#feee8c]/90 backdrop-blur-md border-b-2 border-[#1a5e3a]/10 ${scrolled ? "shadow-lg" : ""}`}
+      style={{ height: scrolled ? 70 : 100 }}
+    >
+      <div className="max-w-[1600px] mx-auto h-full px-6 lg:px-10 flex items-center">
+        <div className="flex items-center justify-between w-full">
           {/* Left nav */}
           <nav className="hidden lg:flex items-center gap-10 flex-1">
             {NAV_LEFT.map((item) => (
               <NavLink key={item.path} to={item.path} className={activeStyle}>
-                {item.name}
+                <span className="nav-link">{item.name}</span>
               </NavLink>
             ))}
           </nav>
 
           {/* Logo center */}
           <div className="flex-shrink-0 mx-auto lg:mx-6">
-            <Logo size="h-20 md:h-20" />
+            <Logo size={scrolled ? "h-16 md:h-16" : "h-20 md:h-20"} />
           </div>
 
           {/* Right nav */}
           <nav className="hidden lg:flex items-center gap-10 flex-1 justify-end">
             {NAV_RIGHT.map((item) => (
               <NavLink key={item.path} to={item.path} className={activeStyle}>
-                {item.name}
+                <span className="nav-link">{item.name}</span>
               </NavLink>
             ))}
           </nav>

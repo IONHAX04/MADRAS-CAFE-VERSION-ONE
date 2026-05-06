@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from '../components/ui/carousel';
+import StickyHorizontalScroll from '../components/StickyHorizontalScroll';
 import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
-import banner4 from '../assets/home/Home1.jpeg';
+import banner1 from '../assets/homeCarousel/banner1.jpeg';
+import banner2 from '../assets/homeCarousel/banner2.jpeg';
+import banner3 from '../assets/homeCarousel/banner3.jpeg';
+import menu1 from '../assets/homeCarousel/menu1.jpeg';
+import menu2 from '../assets/homeCarousel/menu2.jpeg';
 import banner5 from '../assets/home/secondary-banner.jpeg';
-import banner6 from '../assets/home/Home2.jpeg';
-import hb1 from '../assets/home/Banner1.jpeg';
-import hb2 from '../assets/home/Banner2.jpeg';
-import hb3 from '../assets/home/Banner3.jpeg';
 import f11 from '../assets/images/food11.jpg';
 import f15 from '../assets/images/food15.jpg';
 import g1 from '../assets/gallery/gallery1.png';
@@ -28,7 +36,7 @@ const Home = () => {
       subtitle_start: 'Authentic',
       subtitle_mid: 'tradition in',
       subtitle_end: 'every bite.',
-      image: hb1,
+      image: banner1,
       link: '/menu',
     },
     {
@@ -36,7 +44,7 @@ const Home = () => {
       subtitle_start: 'Thin, golden',
       subtitle_mid: 'and perfectly',
       subtitle_end: 'spiced.',
-      image: hb2,
+      image: banner2,
       link: '/menu',
     },
     {
@@ -44,7 +52,7 @@ const Home = () => {
       subtitle_start: 'Soft cakes',
       subtitle_mid: 'with secret',
       subtitle_end: 'spices.',
-      image: hb3,
+      image: banner3,
       link: '/menu',
     }
   ];
@@ -57,12 +65,12 @@ const Home = () => {
   return (
     <div className="bg-[#f6e0b0] relative">
       {/* Hero Section - Fixed height on mobile to avoid browser toolbar issues */}
-      <section className="relative md:sticky top-0 h-[650px] md:h-[90vh] bg-[#1a5e3a] overflow-hidden z-0">
+      <section className="relative md:sticky top-0 h-[650px] md:h-[90vh] bg-[#feee8c] overflow-hidden z-0">
         <div className="relative h-full w-full">
           {NEW_HERO_SLIDES.map((slide, idx) => (
             <div
               key={slide.id}
-              className="absolute inset-0 transition-transform duration-[1800ms] ease-[cubic-bezier(0.7,0,0.3,1)] bg-[#1a5e3a]"
+              className="absolute inset-0 transition-transform duration-[1800ms] ease-[cubic-bezier(0.7,0,0.3,1)] bg-[#feee8c]"
               style={{
                 transform: idx === current ? 'translateX(0)' : (idx < current ? 'translateX(0)' : 'translateX(100%)'),
                 zIndex: idx,
@@ -81,10 +89,10 @@ const Home = () => {
               {/* Content aligned to the left */}
               <div className="absolute inset-0 flex items-center z-20 px-6 md:px-24">
                 <div className={`max-w-4xl transition-all duration-1000 delay-300 ${idx === current ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                  <h1 className="font-decorative text-white text-5xl md:text-8xl drop-shadow-2xl leading-[1.6] mb-8 flex flex-wrap gap-x-6 gap-y-2">
-                    <span className="border-b-2 border-white/40 pb-1">{slide.subtitle_start}</span>
-                    <span className="border-b-2 border-white/40 pb-1">{slide.subtitle_mid}</span>
-                    <span className="text-[#f4b700] border-b-2 border-[#f4b700]/40 pb-1">{slide.subtitle_end}</span>
+                  <h1 className="font-decorative text-[#1a5e3a] text-5xl md:text-8xl drop-shadow-2xl leading-[1.6] mb-8 flex flex-wrap gap-x-6 gap-y-2">
+                    <span className="border-b-2 border-[#1a5e3a]/40 pb-1">{slide.subtitle_start}</span>
+                    <span className="border-b-2 border-[#1a5e3a]/40 pb-1">{slide.subtitle_mid}</span>
+                    <span className="text-[#d97706] border-b-2 border-[#d97706]/40 pb-1">{slide.subtitle_end}</span>
                   </h1>
                   <Link
                     to={slide.link}
@@ -102,41 +110,29 @@ const Home = () => {
           <button
             aria-label="Previous slide"
             onClick={() => setCurrent((c) => (c - 1 + NEW_HERO_SLIDES.length) % NEW_HERO_SLIDES.length)}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white flex items-center justify-center transition-all border border-white/20"
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1a5e3a]/10 hover:bg-[#1a5e3a]/20 backdrop-blur-sm text-[#1a5e3a] flex items-center justify-center transition-all border border-[#1a5e3a]/20"
           >
             <ChevronLeft size={32} />
           </button>
           <button
             aria-label="Next slide"
             onClick={() => setCurrent((c) => (c + 1) % NEW_HERO_SLIDES.length)}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white flex items-center justify-center transition-all border border-white/20"
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1a5e3a]/10 hover:bg-[#1a5e3a]/20 backdrop-blur-sm text-[#1a5e3a] flex items-center justify-center transition-all border border-[#1a5e3a]/20"
           >
             <ChevronRight size={32} />
           </button>
         </div>
       </section>
-
       {/* Main Content Sections - Overlay above sticky hero */}
       <div className="relative z-10">
         {/* Soft Serve Heading */}
-        <section className="bg-[#1a5e3a] paper-texture pt-16 pb-0 px-6 text-center border-t-8 border-[#f4b700] shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
-          <p className="font-display font-bold text-[#f4b700] text-4xl md:text-3xl mt-1 uppercase tracking-widest">ZURICH</p>
-          <h2 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">SOUTH INDIAN</h2>
-          <p className="font-display font-bold text-[#f4b700] text-xl md:text-3xl mt-4 uppercase tracking-widest">Check Out The Menu</p>
+        <section className="bg-[#feee8c] paper-texture pt-16 pb-0 px-6 text-center border-t-8 border-[#1a5e3a] shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
+          <p className="font-display font-bold text-[#1a5e3a] text-4xl md:text-3xl mt-1 uppercase tracking-widest">ZURICH</p>
+          <h2 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight">SOUTH INDIAN</h2>
+          <p className="font-display font-bold text-[#1a5e3a] text-xl md:text-3xl mt-4 uppercase tracking-widest">Check Out The Menu</p>
         </section>
 
-        {/* Cones row image */}
-        <section className="bg-[#1a5e3a]">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 py-16 px-6">
-            <img src={banner4} alt="Madras Cafe authentic dosas" className="w-full h-[400px] md:h-[500px] object-cover rounded-md" />
-            <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[500px] object-cover rounded-md" />
-          </div>
-          <div className="text-center pb-16 px-6">
-            <Link to="/menu" className="inline-block bg-[#f6e0b0] text-[#1a5e3a] hover:bg-white px-10 py-4 font-nav font-bold tracking-widest text-sm transition-colors">
-              VIEW THE FULL MENU
-            </Link>
-          </div>
-        </section>
+        <StickyHorizontalScroll />
 
         {/* Promo tiles */}
         <section className="bg-[#f6e0b0] paper-texture py-20 px-6">

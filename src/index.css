@@ -114,3 +114,46 @@ code {
         border-bottom-color: inherit;
     }
 }
+
+/* Sweep button */
+.btn-sweep {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 2px solid #1a5e3a;
+  background: transparent;
+  color: #1a5e3a;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.btn-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f4b700;
+  transform: translateX(-101%);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+.btn-sweep:hover { color: #ffffff; }
+.btn-sweep:hover::before { transform: translateX(0); }
+
+/* image hover treatment */
+.img-hover {
+  overflow: hidden;
+}
+.img-hover img {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.9s ease;
+}
+.img-hover:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.08) saturate(1.1);
+}
+
+.font-italic-accent {
+  font-family: "Great Vibes", cursive;
+}
+
