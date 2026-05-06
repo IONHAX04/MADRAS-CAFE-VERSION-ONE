@@ -4,10 +4,10 @@ import { Phone, MapPin, Clock } from 'lucide-react';
 
 const Locations = () => {
   return (
-    <div className="bg-white paper-texture">
-      <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
-        <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">LOCATIONS</h1>
-        <p className="font-script text-white text-2xl md:text-4xl mt-3">Find Your Madras Cafe</p>
+    <div className="bg-white paper-texture pt-[100px]">
+      <section className="bg-[#feee8c] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
+        <h1 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight">LOCATIONS</h1>
+        <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-3">Find Your Madras Cafe</p>
       </section>
 
       <section className="py-20 px-6">

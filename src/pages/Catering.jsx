@@ -15,10 +15,10 @@ const Catering = () => {
   };
 
   return (
-    <div className="bg-white">
-      <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
-        <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">CATERING</h1>
-        <p className="font-script text-white text-2xl md:text-4xl mt-3">Bring The Authentic Taste</p>
+    <div className="bg-white pt-[100px]">
+      <section className="bg-[#feee8c] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
+        <h1 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight">CATERING</h1>
+        <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-3">Bring The Authentic Taste</p>
       </section>
 
       <section className="max-w-5xl mx-auto py-20 px-6 paper-texture">

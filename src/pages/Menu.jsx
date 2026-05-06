@@ -44,11 +44,11 @@ const Menu = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-[100px]">
       {/* Header Section */}
-      <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
-        <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">THE MENU</h1>
-        <p className="font-script text-white text-2xl md:text-4xl mt-3">Authentic Flavors, Delivered</p>
+      <section className="bg-[#feee8c] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
+        <h1 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight">THE MENU</h1>
+        <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-3">Authentic Flavors, Delivered</p>
       </section>
 
       {/* Categories Grid */}

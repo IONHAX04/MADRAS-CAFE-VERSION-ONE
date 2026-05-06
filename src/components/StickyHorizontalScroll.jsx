@@ -38,7 +38,7 @@ const PANELS = [
     titleAccent: "Loud kitchen.",
     body: "Our team is six. The menu is twenty-five plates. We open the doors at half past seven and light the first stove with a match — the way we always have.",
     cta: { label: "Find a Location", to: "/locations" },
-    bg: "bg-[#f4b700] text-[#1a5e3a]",
+    bg: "bg-[#feee8c] text-[#1a5e3a]",
     image: menu2,
   },
 ];
@@ -128,10 +128,8 @@ function Panel({ panel, index, mobile = false }) {
         mobile ? "py-24 px-6" : "px-10 md:px-20"
       }`}
     >
-      <div className={`max-w-7xl mx-auto h-full grid grid-cols-1 ${
-        panel.kind === "menu" ? "" : "md:grid-cols-2"
-      } gap-12 md:gap-20 items-center`}>
-        <div>
+      <div className={`max-w-7xl mx-auto h-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center`}>
+        <div className="z-10">
           <p className="text-[11px] font-bold tracking-[0.4em] uppercase mb-6 opacity-80">
             {panel.eyebrow}
           </p>
@@ -171,7 +169,7 @@ function Panel({ panel, index, mobile = false }) {
         )}
 
         {panel.kind === "menu" && (
-          <div className="grid grid-cols-2 gap-5 md:gap-7 max-w-2xl md:absolute md:right-20 md:top-1/2 md:-translate-y-1/2 md:w-[44%] mt-10 md:mt-0">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 mt-10 md:mt-0">
             {panel.items.map((m) => (
               <div
                 key={m.id}

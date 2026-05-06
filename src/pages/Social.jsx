@@ -5,10 +5,10 @@ import { INSTAGRAM_FEED } from '../data/mock';
 
 const Social = () => {
   return (
-    <div className="bg-white">
-      <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
-        <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">SOCIAL</h1>
-        <p className="font-script text-white text-2xl md:text-4xl mt-3">Follow The South Indian Flavor</p>
+    <div className="bg-white pt-[100px]">
+      <section className="bg-[#feee8c] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
+        <h1 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight">SOCIAL</h1>
+        <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-3">Follow The South Indian Flavor</p>
       </section>
 
       <section className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-6 paper-texture">
