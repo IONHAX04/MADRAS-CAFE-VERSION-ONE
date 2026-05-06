@@ -65,7 +65,7 @@ const Home = () => {
   return (
     <div className="bg-[#f6e0b0] relative">
       {/* Hero Section - Fixed height on mobile to avoid browser toolbar issues */}
-      <section className="relative md:sticky top-0 h-[650px] md:h-[90vh] bg-[#feee8c] overflow-hidden z-0">
+      <section className="relative md:sticky top-0 h-screen bg-[#feee8c] overflow-hidden z-0">
         <div className="relative h-full w-full">
           {NEW_HERO_SLIDES.map((slide, idx) => (
             <div
@@ -82,21 +82,20 @@ const Home = () => {
                 <img
                   src={slide.image}
                   alt={slide.subtitle_start}
-                  className={`w-auto h-[70%] md:h-[90%] object-contain transition-transform duration-[6000ms] ease-out ${idx === current ? 'scale-110 translate-x-0' : 'scale-100 translate-x-20'}`}
+                  className={`w-full h-full object-cover transition-transform duration-[6000ms] ease-out ${idx === current ? 'scale-110 translate-x-0' : 'scale-100 translate-x-20'}`}
                 />
               </div>
 
-              {/* Content aligned to the left */}
-              <div className="absolute inset-0 flex items-center z-20 px-6 md:px-24">
-                <div className={`max-w-4xl transition-all duration-1000 delay-300 ${idx === current ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                  <h1 className="font-decorative text-[#1a5e3a] text-5xl md:text-8xl drop-shadow-2xl leading-[1.6] mb-8 flex flex-wrap gap-x-6 gap-y-2">
-                    <span className="border-b-2 border-[#1a5e3a]/40 pb-1">{slide.subtitle_start}</span>
-                    <span className="border-b-2 border-[#1a5e3a]/40 pb-1">{slide.subtitle_mid}</span>
-                    <span className="text-[#d97706] border-b-2 border-[#d97706]/40 pb-1">{slide.subtitle_end}</span>
+              {/* Content left-aligned but vertically centered */}
+              <div className="absolute inset-0 flex items-center justify-start z-20 px-6 md:pl-32">
+                <div className={`max-w-3xl transition-all duration-1000 delay-300 ${idx === current ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                  <h1 className="font-decorative text-[#1a5e3a] text-5xl md:text-8xl drop-shadow-2xl leading-[1.2] mb-10">
+                    <span className="block mb-2">{slide.subtitle_start} {slide.subtitle_mid}</span>
+                    <span className="text-[#d97706] italic">{slide.subtitle_end}</span>
                   </h1>
                   <Link
                     to={slide.link}
-                    className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-nav font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-xl"
+                    className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-[#1a5e3a] hover:text-white px-12 py-5 font-nav font-bold tracking-[0.2em] text-sm transition-all transform hover:scale-105 shadow-2xl rounded-sm"
                   >
                     EXPLORE MENU
                   </Link>

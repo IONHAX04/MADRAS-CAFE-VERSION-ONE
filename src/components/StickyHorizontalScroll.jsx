@@ -7,9 +7,8 @@ import {
 } from "framer-motion";
 import { Link } from "react-router-dom";
 import { DOSA_UTHAPAM } from "../data/mock";
-import storyImg from "../assets/home/authentic-dosa.jpeg";
-import lifestyleImg from "../assets/home/secondary-banner.jpeg";
-import menuImg from "../assets/home/menu1.jpeg";
+import menu1 from "../assets/homeCarousel/menu1.jpeg";
+import menu2 from "../assets/homeCarousel/menu2.jpeg";
 
 const PANELS = [
   {
@@ -20,7 +19,7 @@ const PANELS = [
     body: "Madras Cafe is a sixty-year-old room in Mylapore. We cook the south of India the way our grandmothers did — slowly, quietly, with a brass davarah on the counter that has never left.",
     cta: { label: "Read the Story", to: "/menu" },
     bg: "bg-[#feee8c]",
-    image: storyImg,
+    image: menu1,
   },
   {
     kind: "menu",
@@ -40,7 +39,7 @@ const PANELS = [
     body: "Our team is six. The menu is twenty-five plates. We open the doors at half past seven and light the first stove with a match — the way we always have.",
     cta: { label: "Find a Location", to: "/locations" },
     bg: "bg-[#f4b700] text-[#1a5e3a]",
-    image: lifestyleImg,
+    image: menu2,
   },
 ];
 

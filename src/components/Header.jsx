@@ -60,37 +60,37 @@ const Header = () => {
 
         {/* Mobile menu overlay */}
         {open && (
-          <div className="fixed inset-0 z-[100] bg-[#fdfaf5] lg:hidden animate-in fade-in duration-300">
-            <div className="p-6 h-full flex flex-col">
-              <div className="flex items-center justify-between">
+          <div className="fixed inset-0 z-[9999] bg-[#feee8c] opacity-100 lg:hidden overflow-y-auto">
+            <div className="p-8 min-h-full flex flex-col bg-[#feee8c]">
+              <div className="flex items-center justify-between mb-8">
                 <Logo size="h-16" />
                 <button
                   onClick={() => setOpen(false)}
-                  className="w-10 h-10 rounded-full bg-[#1a5e3a] flex items-center justify-center text-[#f4b700] shadow-lg transition-transform hover:scale-110 active:scale-95"
+                  className="w-12 h-12 rounded-full bg-[#1a5e3a] flex items-center justify-center text-[#feee8c] shadow-lg transition-transform hover:scale-110 active:scale-95"
                 >
-                  <X size={24} />
+                  <X size={28} />
                 </button>
               </div>
               
-              <nav className="mt-16 flex flex-col gap-6 px-4">
+              <nav className="mt-12 flex flex-col gap-4">
                 {[...NAV_LEFT, ...NAV_RIGHT].map((item, idx) => (
                   <NavLink
                     key={item.path}
                     to={item.path}
                     onClick={() => setOpen(false)}
-                    className="text-[#1a5e3a] font-nav font-black text-5xl tracking-tight uppercase hover:text-[#f4b700] transition-colors"
-                    style={{ animationDelay: `${idx * 100}ms` }}
+                    className="text-[#1a5e3a] font-nav font-black text-4xl tracking-tight uppercase hover:text-[#d97706] transition-colors border-b border-[#1a5e3a]/10 pb-2"
+                    style={{ animationDelay: `${idx * 75}ms` }}
                   >
-                    <span className="inline-block animate-in slide-in-from-left-8 duration-500 fill-mode-both">
+                    <span className="inline-block animate-in slide-in-from-left-4 duration-500 fill-mode-both">
                       {item.name}
                     </span>
                   </NavLink>
                 ))}
               </nav>
 
-              <div className="mt-auto pb-10 px-4">
-                <p className="text-[#1a5e3a]/40 font-display font-bold tracking-widest text-xs uppercase">
-                  © Madras Cafe
+              <div className="mt-auto pb-6">
+                <p className="text-[#1a5e3a]/60 font-display font-bold tracking-widest text-xs uppercase text-center">
+                  © Madras Cafe · Authentic Tradition
                 </p>
               </div>
             </div>
