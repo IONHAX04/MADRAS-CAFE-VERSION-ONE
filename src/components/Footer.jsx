@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="sj-footer">
       {/* Instagram */}
-      <section className="bg-[#ffd430] paper-texture py-16 px-6">
+      <section className="bg-[#fee9ba] paper-texture py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center font-display font-black text-3xl md:text-4xl tracking-tight text-neutral-800 mb-2">
             INSTAGRAM <a href="https://instagram.com/madrascafe" target="_blank" rel="noreferrer" className="text-[#1a5e3a] hover:opacity-70 transition-opacity">@MADRASCAFE</a>
@@ -36,7 +36,7 @@ const Footer = () => {
             <a href="https://pinterest.com" target="_blank" rel="noreferrer" aria-label="Pinterest" className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-[#f4b700] transition-colors">
               <Heart size={20} />
             </a>
-            <a href="https://instagram.com/madrascafe" target="_blank" rel="noreferrer" aria-label="Instagram" className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-[#ffd430] hover:text-[#f4b700] transition-colors">
+            <a href="https://instagram.com/madrascafe" target="_blank" rel="noreferrer" aria-label="Instagram" className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-[#fee9ba] hover:text-[#f4b700] transition-colors">
               <Instagram size={20} />
             </a>
           </div>

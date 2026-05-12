@@ -20,7 +20,7 @@ import { Toaster } from "./components/ui/toaster";
 
 function App() {
   return (
-    <div className="App min-h-screen flex flex-col bg-[#ffd430]">
+    <div className="App min-h-screen flex flex-col bg-[#fee9ba]">
       <BrowserRouter>
         <ScrollToTop />
         <Header />

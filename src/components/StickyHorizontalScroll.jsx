@@ -17,7 +17,7 @@ const PANELS = [
     titleAccent: "a long table.",
     body: "Madras Cafe is a sixty-year-old room in Mylapore. We cook the south of India the way our grandmothers did — slowly, quietly, with a brass davarah on the counter that has never left.",
     cta: { label: "Read the Story", to: "/menu" },
-    bg: "bg-[#ffd430]",
+    bg: "bg-[#fee9ba]",
     image: banner4,
   },
   {

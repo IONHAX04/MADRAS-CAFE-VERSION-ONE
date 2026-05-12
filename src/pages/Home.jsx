@@ -5,7 +5,7 @@ import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import StickyHorizontalScroll from '../components/StickyHorizontalScroll';
 
 // Hero Placeholder
-import latestV2 from '../assets/homeCarousel/latestV2.jpeg';
+import latestV6 from '../assets/homeCarousel/latestV6.jpeg';
 
 // Original Banners
 import banner4 from '../assets/banners/BANNER4.jpg';
@@ -31,17 +31,17 @@ const Home = () => {
   }, [HERO_SLIDES.length]);
 
   return (
-    <div className="bg-[#ffd430] relative">
+    <div className="bg-[#fee9ba] relative">
       {/* Hero Carousel - STICKY Section */}
-      <section className="relative md:sticky top-0 h-[70vh] md:h-screen bg-[#ffd430] overflow-hidden z-0">
+      <section className="relative md:sticky top-0 h-[70vh] md:h-screen bg-[#fee9ba] overflow-hidden z-0">
         <div className="relative h-full w-full">
           {HERO_SLIDES.map((slide, idx) => (
             <div
               key={slide.id}
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
             >
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-x-0 top-24 md:top-48 flex flex-col items-start text-left px-6 md:pl-32 max-w-5xl">
+              <img src={latestV6} alt={slide.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-x-0 top-12 md:top-24 flex flex-col items-center text-center px-6">
                 <h1 className="font-display font-black text-[#1a5e3a] text-4xl md:text-7xl tracking-tight">{slide.title}</h1>
                 <p className="text-[#1a5e3a] font-display tracking-[0.2em] mt-4 text-sm md:text-xl uppercase font-bold">{slide.subtitle}</p>
                 <Link to={slide.link} className="mt-8 inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-xl">
@@ -82,7 +82,7 @@ const Home = () => {
       </section>
 
       {/* Main Content Sections - Overlays the sticky hero */}
-      <div className="relative z-10 bg-[#ffd430] shadow-[0_-20px_50px_rgba(0,0,0,0.15)]">
+      <div className="relative z-10 bg-[#fee9ba] shadow-[0_-20px_50px_rgba(0,0,0,0.15)]">
         
         {/* Secondary Hero Section (Sticky Horizontal Scroll - 2 Chapters) */}
         <StickyHorizontalScroll />
@@ -111,7 +111,7 @@ const Home = () => {
         </section>
 
         {/* Promo tiles */}
-        <section className="bg-[#ffd430] paper-texture py-24 px-6">
+        <section className="bg-[#fee9ba] paper-texture py-24 px-6">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {PROMO_TILES.map((tile, i) => (
               <Link to={tile.link} key={i} className="group block relative overflow-hidden bg-neutral-200 rounded-lg shadow-lg">
@@ -135,7 +135,7 @@ const Home = () => {
         </section>
 
         {/* Properly Fitted Gallery */}
-        <section className="bg-[#ffd430] paper-texture py-24 px-6 overflow-hidden">
+        <section className="bg-[#fee9ba] paper-texture py-24 px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight mb-4">OUR GALLERY</h2>

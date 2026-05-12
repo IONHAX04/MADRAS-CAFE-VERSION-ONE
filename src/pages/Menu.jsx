@@ -15,7 +15,7 @@ const categories = [
 ];
 
 const Card = ({ title, image, count, onClick }) => (
-  <button onClick={onClick} className="group relative block overflow-hidden bg-[#ffd430] w-full text-left">
+  <button onClick={onClick} className="group relative block overflow-hidden bg-[#fee9ba] w-full text-left">
     <div className="aspect-[4/5]">
       <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
     </div>
@@ -44,9 +44,9 @@ const Menu = () => {
   };
 
   return (
-    <div className="bg-[#ffd430] pt-[100px]">
+    <div className="bg-[#fee9ba] pt-[100px]">
       {/* Header Section */}
-      <section className="bg-[#ffd430] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
+      <section className="bg-[#fee9ba] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
         <h1 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight">THE MENU</h1>
         <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-3">Authentic Flavors, Delivered</p>
       </section>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu as MenuIcon, X, Zap } from 'lucide-react';
 import Logo from './Logo';
 import { NAV_LEFT, NAV_RIGHT } from '../data/mock';
@@ -11,11 +11,11 @@ const Header = () => {
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className="sj-header sticky top-0 z-50 bg-[#ffd430] paper-texture border-b-2 border-[#1a5e3a]">
+    <header className="sj-header sticky top-0 z-50 bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a]">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between">
           {/* Left nav */}
-          <nav className="hidden lg:flex items-center gap-10 flex-1">
+          <nav className="hidden lg:flex items-center gap-x-12 xl:gap-x-16">
             {NAV_LEFT.map((item) => (
               <NavLink key={item.path} to={item.path} className={activeStyle}>
                 {item.name}
@@ -24,12 +24,12 @@ const Header = () => {
           </nav>
 
           {/* Logo center */}
-          <div className="flex-shrink-0 mx-auto lg:mx-6">
-            <Logo size="h-20 md:h-20" />
-          </div>
+          <Link to="/" className="flex flex-col items-center py-4 scale-90 md:scale-100">
+            <Logo className="w-[120px] md:w-[150px] lg:w-[180px]" />
+          </Link>
 
           {/* Right nav */}
-          <nav className="hidden lg:flex items-center gap-10 flex-1 justify-end">
+          <nav className="hidden lg:flex items-center gap-x-12 xl:gap-x-16">
             {NAV_RIGHT.map((item) => (
               <NavLink key={item.path} to={item.path} className={activeStyle}>
                 {item.name}
@@ -37,31 +37,34 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile toggle */}
+          {/* Mobile menu trigger */}
           <button
             onClick={() => setOpen(!open)}
+            className="lg:hidden p-2 text-[#1a5e3a]"
             aria-label="Toggle menu"
-            className="lg:hidden text-[#1a5e3a] p-2"
           >
             {open ? <X size={28} /> : <MenuIcon size={28} />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile drawer */}
-        {open && (
-          <div className="lg:hidden pb-6 flex flex-col items-center gap-4 animate-in fade-in slide-in-from-top-2 duration-200">
-            {[...NAV_LEFT, ...NAV_RIGHT].map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                onClick={() => setOpen(false)}
-                className={linkBase}
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </div>
-        )}
+      {/* Mobile Drawer */}
+      <div className={`
+        lg:hidden fixed inset-0 top-[88px] bg-white z-[60] transition-transform duration-500
+        ${open ? 'translate-x-0' : 'translate-x-full'}
+      `}>
+        <div className="p-8 flex flex-col gap-y-6">
+          {[...NAV_LEFT, ...NAV_RIGHT].map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              onClick={() => setOpen(false)}
+              className="text-2xl font-display font-black text-[#1a5e3a] tracking-tight hover:pl-2 transition-all"
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </div>
       </div>
     </header>
   );
