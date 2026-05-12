@@ -4,11 +4,15 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import StickyHorizontalScroll from '../components/StickyHorizontalScroll';
 
+// Hero Placeholder
+import latestV2 from '../assets/homeCarousel/latestV2.jpeg';
+
+// Original Banners
 import banner4 from '../assets/banners/BANNER4.jpg';
 import banner5 from '../assets/home/secondary-banner.jpeg';
 import banner6 from '../assets/banners/BANNER6.jpg';
 
-// Gallery images
+// Original Gallery images
 import g1 from '../assets/gallery/gallery1.png';
 import g2 from '../assets/gallery/gallery2.png';
 import g3 from '../assets/gallery/gallery3.png';
@@ -24,12 +28,12 @@ const Home = () => {
   useEffect(() => {
     const t = setInterval(() => setCurrent((c) => (c + 1) % HERO_SLIDES.length), 6000);
     return () => clearInterval(t);
-  }, []);
+  }, [HERO_SLIDES.length]);
 
   return (
-    <div className="bg-[#f6e0b0] relative">
+    <div className="bg-[#ffd430] relative">
       {/* Hero Carousel - STICKY Section */}
-      <section className="relative md:sticky top-0 h-[70vh] md:h-screen bg-[#1a5e3a] overflow-hidden z-0">
+      <section className="relative md:sticky top-0 h-[70vh] md:h-screen bg-[#ffd430] overflow-hidden z-0">
         <div className="relative h-full w-full">
           {HERO_SLIDES.map((slide, idx) => (
             <div
@@ -37,10 +41,9 @@ const Home = () => {
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
             >
               <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-20 md:bottom-32 flex flex-col items-center text-center px-6">
-                <h1 className="font-display font-black text-white text-4xl md:text-6xl tracking-tight drop-shadow-2xl">{slide.title}</h1>
-                <p className="text-white font-display tracking-[0.2em] mt-4 text-sm md:text-lg uppercase drop-shadow-lg">{slide.subtitle}</p>
+              <div className="absolute inset-x-0 top-24 md:top-48 flex flex-col items-start text-left px-6 md:pl-32 max-w-5xl">
+                <h1 className="font-display font-black text-[#1a5e3a] text-4xl md:text-7xl tracking-tight">{slide.title}</h1>
+                <p className="text-[#1a5e3a] font-display tracking-[0.2em] mt-4 text-sm md:text-xl uppercase font-bold">{slide.subtitle}</p>
                 <Link to={slide.link} className="mt-8 inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-xl">
                   {slide.cta}
                 </Link>
@@ -79,7 +82,7 @@ const Home = () => {
       </section>
 
       {/* Main Content Sections - Overlays the sticky hero */}
-      <div className="relative z-10 bg-[#f6e0b0] shadow-[0_-20px_50px_rgba(0,0,0,0.15)]">
+      <div className="relative z-10 bg-[#ffd430] shadow-[0_-20px_50px_rgba(0,0,0,0.15)]">
         
         {/* Secondary Hero Section (Sticky Horizontal Scroll - 2 Chapters) */}
         <StickyHorizontalScroll />
@@ -94,7 +97,7 @@ const Home = () => {
         <section className="bg-[#1a5e3a] pb-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6">
             <div className="overflow-hidden rounded-xl shadow-2xl border-2 border-[#f4b700]/30">
-              <img src={banner4} alt="Madras Cafe authentic dosas" className="w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={banner4} alt="Madras Cafe authentic" className="w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="overflow-hidden rounded-xl shadow-2xl border-2 border-[#f4b700]/30">
               <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700" />
@@ -108,7 +111,7 @@ const Home = () => {
         </section>
 
         {/* Promo tiles */}
-        <section className="bg-[#f6e0b0] paper-texture py-24 px-6">
+        <section className="bg-[#ffd430] paper-texture py-24 px-6">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {PROMO_TILES.map((tile, i) => (
               <Link to={tile.link} key={i} className="group block relative overflow-hidden bg-neutral-200 rounded-lg shadow-lg">
@@ -132,7 +135,7 @@ const Home = () => {
         </section>
 
         {/* Properly Fitted Gallery */}
-        <section className="bg-[#f6e0b0] paper-texture py-24 px-6 overflow-hidden">
+        <section className="bg-[#ffd430] paper-texture py-24 px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight mb-4">OUR GALLERY</h2>
@@ -159,7 +162,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Section 2: Culinary Process & Snacks */}
+            {/* Section 2 */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:auto-rows-[250px] mt-4">
               <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
                 <img src={g5} alt="Dosa Process" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -175,7 +178,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Section 3: Drinks & Social */}
+            {/* Section 3 */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[250px] mt-4">
               <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
                 <img src={g7} alt="Refreshing Drinks" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -192,7 +195,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </div> {/* End relative z-10 content overlay */}
+      </div>
     </div>
   );
 };

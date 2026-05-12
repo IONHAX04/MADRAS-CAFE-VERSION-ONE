@@ -5,7 +5,7 @@ import { LOCATIONS } from '../data/mock';
 
 const MenuItemGrid = ({ items, label }) => {
   return (
-    <section className="bg-[#f6e0b0] paper-texture py-8 md:py-12 px-6">
+    <section className="bg-[#ffd430] paper-texture py-8 md:py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6 py-8">
           <h1 className="font-script text-[#1a5e3a] text-6xl md:text-8xl leading-none">{label}</h1>

@@ -11,7 +11,7 @@ const Header = () => {
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className="sj-header sticky top-0 z-50 bg-[#f6e0b0] paper-texture border-b-2 border-[#1a5e3a]">
+    <header className="sj-header sticky top-0 z-50 bg-[#ffd430] paper-texture border-b-2 border-[#1a5e3a]">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between">
           {/* Left nav */}

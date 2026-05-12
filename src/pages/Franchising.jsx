@@ -15,7 +15,7 @@ const Franchising = () => {
   const onChange = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
   return (
-    <div className="bg-[#f6e0b0]">
+    <div className="bg-[#ffd430]">
       <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
         <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">FRANCHISING</h1>
         <p className="font-script text-white text-2xl md:text-4xl mt-3">Join The Holy Family</p>
