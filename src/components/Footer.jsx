@@ -1,50 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Heart } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
 import { INSTAGRAM_FEED } from '../data/mock';
 import Logo from './Logo';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const { toast } = useToast();
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (!email) return;
-    toast({
-      title: 'Thank you!',
-      description: `You're now signed up with ${email}. Delicious treats incoming.`,
-    });
-    setEmail('');
-  };
-
   return (
     <footer className="sj-footer">
-      {/* Mailing list */}
-      <section className="bg-[#f6e0b0] paper-texture py-20 px-6 border-t border-neutral-200">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display font-black text-4xl md:text-5xl tracking-tight text-neutral-800 mb-2">MAILING LIST</h2>
-          <p className="font-display tracking-widest text-neutral-700 mb-8 text-sm md:text-base">SIGN UP FOR EXCLUSIVE UPDATES & DEALS</p>
-          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="Email Address"
-              className="flex-1 px-5 py-3 border-2 border-neutral-300 bg-white text-neutral-800 focus:outline-none focus:border-[#1a5e3a] transition-colors rounded-none"
-            />
-            <button
-              type="submit"
-              className="px-8 py-3 bg-[#1a5e3a] hover:bg-[#4CAFAE] text-white font-display font-bold tracking-widest text-sm transition-colors rounded-none"
-            >
-              SUBSCRIBE
-            </button>
-          </form>
-        </div>
-      </section>
-
       {/* Instagram */}
       <section className="bg-[#f6e0b0] paper-texture py-16 px-6">
         <div className="max-w-7xl mx-auto">

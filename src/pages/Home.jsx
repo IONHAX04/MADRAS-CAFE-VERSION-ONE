@@ -6,6 +6,16 @@ import banner4 from '../assets/banners/BANNER4.jpg';
 import banner5 from '../assets/banners/BANNER5.jpg';
 import banner6 from '../assets/banners/BANNER6.jpg';
 
+// Gallery images
+import g1 from '../assets/gallery/gallery1.png';
+import g2 from '../assets/gallery/gallery2.png';
+import g3 from '../assets/gallery/gallery3.png';
+import g4 from '../assets/gallery/gallery4.png';
+import g5 from '../assets/gallery/gallery5.png';
+import g6 from '../assets/gallery/gallery6.png';
+import g7 from '../assets/gallery/gallery7.png';
+import g8 from '../assets/gallery/gallery8.png';
+
 const Home = () => {
   const [current, setCurrent] = useState(0);
 
@@ -106,6 +116,30 @@ const Home = () => {
       {/* Big banner image */}
       <section className="bg-[#1a5e3a]">
         <img src={banner5} alt="Madras Cafe banner" className="w-full block" />
+      </section>
+
+      {/* Properly Fitted Gallery */}
+      <section className="bg-[#f6e0b0] paper-texture py-24 px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight mb-4">OUR GALLERY</h2>
+            <div className="h-1.5 w-32 bg-[#1a5e3a] mx-auto"></div>
+            <p className="font-display font-bold text-[#1a5e3a] text-xl md:text-2xl mt-6 uppercase tracking-[0.2em]">A Taste of Tradition in Every Frame</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[g1, g2, g3, g4, g5, g6, g7, g8].map((img, idx) => (
+              <div key={idx} className="relative group overflow-hidden rounded-lg shadow-md aspect-square bg-white">
+                <img 
+                  src={img} 
+                  alt={`Gallery ${idx + 1}`} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
     </div>

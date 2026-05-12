@@ -15,7 +15,7 @@ const Catering = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#f6e0b0]">
       <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
         <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">CATERING</h1>
         <p className="font-script text-white text-2xl md:text-4xl mt-3">Bring The Authentic Taste</p>

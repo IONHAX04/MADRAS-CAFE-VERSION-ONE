@@ -1,7 +1,7 @@
 /* Madras Cafe Clone styles */
 
 .App {
-  font-family: 'Roboto Condensed', 'Oswald', system-ui, -apple-system, sans-serif;
+  font-family: 'Noto Serif', system-ui, -apple-system, sans-serif;
   color: #2a2a2a;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .font-display {
-  font-family: 'Oswald', 'Roboto Condensed', system-ui, sans-serif;
+  font-family: 'Noto Serif', system-ui, sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -23,6 +23,26 @@
   font-family: 'Yellowtail', 'Pacifico', cursive;
   font-weight: 400;
   letter-spacing: 0.01em;
+}
+
+.font-decorative {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-script-alt {
+  font-family: 'Marck Script', cursive;
+}
+
+.font-display-header {
+  font-family: 'Playwrite NZ Guides', cursive;
+}
+
+.font-nav {
+  font-family: 'Noto Serif', serif;
+}
+
+button {
+  font-family: 'Noto Serif', serif;
 }
 
 /* Logo styling */
@@ -49,9 +69,3 @@ html {
 ::-webkit-scrollbar-track { background: #f4f4f4; }
 ::-webkit-scrollbar-thumb { background: #1a5e3a; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #4CAFAE; }
-
-/* Date input native styling */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  filter: invert(0.4);
-}
