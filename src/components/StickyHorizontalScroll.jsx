@@ -7,8 +7,7 @@ import {
 } from "framer-motion";
 import { Link } from "react-router-dom";
 import { DOSA_UTHAPAM } from "../data/mock";
-import menu1 from "../assets/homeCarousel/menu1.jpeg";
-import menu2 from "../assets/homeCarousel/menu2.jpeg";
+import banner4 from "../assets/banners/BANNER4.jpg";
 
 const PANELS = [
   {
@@ -19,7 +18,7 @@ const PANELS = [
     body: "Madras Cafe is a sixty-year-old room in Mylapore. We cook the south of India the way our grandmothers did — slowly, quietly, with a brass davarah on the counter that has never left.",
     cta: { label: "Read the Story", to: "/menu" },
     bg: "bg-[#f6e0b0]",
-    image: menu1,
+    image: banner4,
   },
   {
     kind: "menu",
@@ -30,16 +29,6 @@ const PANELS = [
     cta: { label: "See the Menu", to: "/menu" },
     bg: "bg-[#1a5e3a] text-white",
     items: DOSA_UTHAPAM.slice(0, 4),
-  },
-  {
-    kind: "lifestyle",
-    eyebrow: "Chapter 03",
-    title: "Loud floor.",
-    titleAccent: "Loud kitchen.",
-    body: "Our team is six. The menu is twenty-five plates. We open the doors at half past seven and light the first stove with a match — the way we always have.",
-    cta: { label: "Find a Location", to: "/locations" },
-    bg: "bg-[#f6e0b0] text-[#1a5e3a]",
-    image: menu2,
   },
 ];
 
