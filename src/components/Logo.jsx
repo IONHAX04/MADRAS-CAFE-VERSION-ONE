@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoBgW from '../assets/logo/logo_bg_w.png';
-import logoBgY from '../assets/logo/latest.png';
+import logoImg from '../assets/logo/latestLogo.png';
+import headerLogoImg from '../assets/logo/latestHeaderLogo.png';
 
-const Logo = ({ size = 'h-16 md:h-16', variant = 'w' }) => {
-  const src = variant === 'w' ? logoBgW : logoBgY;
+
+const Logo = ({ size = 'h-16 md:h-16', variant = 'w', className = '' }) => {
+  const src = variant === 'w' ? headerLogoImg : logoImg;
 
   return (
-    <Link to="/" className="sj-logo inline-block">
+    <Link to="/" className={`sj-logo inline-block ${className}`}>
       <img src={src} alt="Madras Cafe" className={`${size} object-contain`} />
     </Link>
   );

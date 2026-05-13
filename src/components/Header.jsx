@@ -13,9 +13,9 @@ const Header = () => {
   return (
     <header className="sj-header sticky top-0 z-50 bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a]">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between">
+        <div className="grid grid-cols-3 items-center">
           {/* Left nav */}
-          <nav className="hidden lg:flex items-center gap-x-12 xl:gap-x-16">
+          <nav className="hidden lg:flex items-center gap-x-12 xl:gap-x-16 justify-start">
             {NAV_LEFT.map((item) => (
               <NavLink key={item.path} to={item.path} className={activeStyle}>
                 {item.name}
@@ -24,28 +24,33 @@ const Header = () => {
           </nav>
 
           {/* Logo center */}
-          <Link to="/" className="flex flex-col items-center py-4 scale-90 md:scale-100">
-            <Logo className="w-[120px] md:w-[150px] lg:w-[180px]" />
-          </Link>
+          <div className="flex justify-center">
+            <Link to="/" className="flex flex-col items-center py-4 scale-90 md:scale-100">
+              <Logo className="w-[120px] md:w-[150px] lg:w-[180px]" />
+            </Link>
+          </div>
 
-          {/* Right nav */}
-          <nav className="hidden lg:flex items-center gap-x-12 xl:gap-x-16">
-            {NAV_RIGHT.map((item) => (
-              <NavLink key={item.path} to={item.path} className={activeStyle}>
-                {item.name}
-              </NavLink>
-            ))}
-          </nav>
+          {/* Right nav & Mobile trigger container */}
+          <div className="flex justify-end items-center">
+            <nav className="hidden lg:flex items-center gap-x-12 xl:gap-x-16">
+              {NAV_RIGHT.map((item) => (
+                <NavLink key={item.path} to={item.path} className={activeStyle}>
+                  {item.name}
+                </NavLink>
+              ))}
+            </nav>
 
-          {/* Mobile menu trigger */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 text-[#1a5e3a]"
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={28} /> : <MenuIcon size={28} />}
-          </button>
+            {/* Mobile menu trigger */}
+            <button
+              onClick={() => setOpen(!open)}
+              className="lg:hidden p-2 text-[#1a5e3a]"
+              aria-label="Toggle menu"
+            >
+              {open ? <X size={28} /> : <MenuIcon size={28} />}
+            </button>
+          </div>
         </div>
+
       </div>
 
       {/* Mobile Drawer */}
