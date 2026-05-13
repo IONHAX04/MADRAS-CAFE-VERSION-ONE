@@ -47,8 +47,10 @@ const Home = () => {
               <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
               <div className="absolute inset-x-0 top-6 md:top-12 flex flex-col items-center text-center px-6">
 
-                <h1 className="font-display font-black text-[#1a5e3a] text-4xl md:text-8xl tracking-tight">{slide.title}</h1>
-                <p className="text-[#1a5e3a] font-display tracking-[0.3em] mt-4 text-sm md:text-2xl uppercase font-bold">{slide.subtitle}</p>
+                <h1 className="font-display font-black text-[#1a5e3a] text-3xl md:text-5xl lg:text-6xl tracking-tight">{slide.title}</h1>
+                <p className="text-[#1a5e3a] font-display tracking-[0.4em] mt-4 text-xs md:text-lg uppercase font-bold opacity-80">{slide.subtitle}</p>
+
+
               </div>
               <div className="absolute inset-x-0 bottom-20 md:bottom-24 flex justify-center z-30">
 
@@ -97,8 +99,9 @@ const Home = () => {
 
         {/* Soft Serve Heading */}
         <section className="bg-[#1a5e3a] paper-texture pt-12 md:pt-20 pb-0 px-6 text-center border-t-4 border-[#f4b700]">
-          <h2 className="font-display font-black text-white text-5xl md:text-8xl tracking-tight uppercase">SOUTH INDIAN</h2>
-          <p className="font-script text-[#f4b700] text-4xl md:text-6xl mt-4">Check Out The Menu</p>
+          <h2 className="font-display font-black text-white text-3xl md:text-5xl tracking-tight uppercase">SOUTH INDIAN</h2>
+          <p className="font-script text-[#f4b700] text-2xl md:text-4xl mt-4">Check Out The Menu</p>
+
         </section>
 
         {/* Banner Images Section - Full Screen Coverage */}
@@ -148,9 +151,11 @@ const Home = () => {
         <section className="bg-[#fee9ba] paper-texture py-24 px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight mb-4">OUR GALLERY</h2>
-              <div className="h-1.5 w-32 bg-[#f4b700] mx-auto"></div>
-              <p className="font-display font-bold text-[#1a5e3a] text-xl md:text-2xl mt-6 uppercase tracking-[0.2em]">A Taste of Tradition in Every Frame</p>
+              <h2 className="font-display font-black text-[#1a5e3a] text-3xl md:text-4xl tracking-tight mb-4 uppercase">OUR GALLERY</h2>
+
+              <div className="h-1 w-24 bg-[#f4b700] mx-auto"></div>
+              <p className="font-display font-bold text-[#1a5e3a] text-lg md:text-xl mt-6 uppercase tracking-[0.2em] opacity-90">A Taste of Tradition in Every Frame</p>
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[300px]">

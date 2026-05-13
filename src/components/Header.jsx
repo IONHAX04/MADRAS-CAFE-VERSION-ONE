@@ -18,11 +18,13 @@ const Header = () => {
   }, []);
 
 
-  const linkBase = 'text-[#1a5e3a] font-display font-bold tracking-widest text-sm xl:text-base hover:opacity-70 transition-opacity';
+  const linkBase = 'text-[#1a5e3a] font-display font-bold tracking-[0.2em] text-[10px] xl:text-[12px] hover:opacity-70 transition-opacity uppercase';
+
+
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'py-2 md:py-2 shadow-md' : 'py-2 md:py-8'}`}>
+    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'shadow-md' : ''} py-2`}>
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between lg:grid lg:grid-cols-3">
 
@@ -37,10 +39,11 @@ const Header = () => {
 
           {/* Logo center/left */}
           <div className="flex justify-start lg:justify-center">
-            <Link to="/" className={`flex flex-col items-center transition-all duration-500 ${scrolled ? 'scale-90 md:scale-90' : 'scale-90 md:scale-125'}`}>
+            <Link to="/" className="flex flex-col items-center transition-all duration-500 scale-90 md:scale-100">
               <Logo className="w-[110px] md:w-[150px] lg:w-[180px]" />
             </Link>
           </div>
+
 
 
 

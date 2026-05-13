@@ -69,14 +69,7 @@ export default function StickyHorizontalScroll() {
             ))}
           </motion.div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-20 bg-white/80 backdrop-blur-md px-5 py-3 border-2 border-[#1a5e3a]">
-            {PANELS.map((_, i) => (
-              <ProgressBlip key={i} index={i} progress={smoothProgress} total={PANELS.length} />
-            ))}
-            <span className="ml-3 font-bold text-[10px] tracking-[0.4em] uppercase text-[#1a5e3a]">
-              Scroll →
-            </span>
-          </div>
+
         </div>
       </section>
 
