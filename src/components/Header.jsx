@@ -22,7 +22,7 @@ const Header = () => {
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className={`sj-header sticky top-0 z-50 bg-[#fee9ba]/80 backdrop-blur-md paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'py-2 shadow-md' : 'py-8 md:py-8'}`}>
+    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'py-2 shadow-md' : 'py-8 md:py-8'}`}>
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between lg:grid lg:grid-cols-3">
 
@@ -56,34 +56,36 @@ const Header = () => {
             {/* Mobile menu trigger */}
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden p-2 text-[#1a5e3a]"
+              className="lg:hidden p-2 text-[#1a5e3a] border-2 border-[#1a5e3a] rounded-md bg-[#f4b700]/10 hover:bg-[#f4b700]/20 transition-colors"
               aria-label="Toggle menu"
             >
-              {open ? <X size={28} /> : <MenuIcon size={28} />}
+              {open ? <X size={24} /> : <MenuIcon size={24} />}
             </button>
+
           </div>
         </div>
 
       </div>
 
-      {/* Mobile Drawer */}
       <div className={`
-        lg:hidden fixed inset-0 ${scrolled ? 'top-[64px]' : 'top-[112px]'} bg-white z-[60] transition-all duration-500
-        ${open ? 'translate-x-0' : 'translate-x-full'}
+        lg:hidden fixed inset-0 ${scrolled ? 'top-[64px]' : 'top-[112px]'} bg-[#fee9ba] paper-texture z-[110] transition-all duration-500 ease-in-out shadow-2xl
+        ${open ? 'translate-x-0 opacity-100 visible' : 'translate-x-full opacity-0 invisible'}
       `}>
-        <div className="p-8 flex flex-col gap-y-6">
+
+        <div className="p-10 flex flex-col gap-y-10 h-full overflow-y-auto pt-16">
           {[...NAV_LEFT, ...NAV_RIGHT].map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               onClick={() => setOpen(false)}
-              className="text-2xl font-display font-black text-[#1a5e3a] tracking-tight hover:pl-2 transition-all"
+              className="text-4xl font-display font-black text-[#1a5e3a] tracking-tight hover:translate-x-4 transition-all duration-300"
             >
               {item.name}
             </NavLink>
           ))}
         </div>
       </div>
+
     </header>
   );
 };

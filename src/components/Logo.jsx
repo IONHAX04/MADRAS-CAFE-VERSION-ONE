@@ -8,10 +8,9 @@ const Logo = ({ size = 'h-16 md:h-16', variant = 'w', className = '' }) => {
   const src = variant === 'w' ? headerLogoImg : logoImg;
 
   return (
-    <Link to="/" className={`sj-logo inline-block ${className}`}>
-      <img src={src} alt="Madras Cafe" className={`${size} object-contain`} />
-    </Link>
+    <img src={src} alt="Madras Cafe" className={`sj-logo object-contain ${size} ${className}`} />
   );
 };
+
 
 export default Logo;
