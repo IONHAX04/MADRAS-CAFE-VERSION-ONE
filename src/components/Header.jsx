@@ -22,7 +22,7 @@ const Header = () => {
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'py-2 shadow-md' : 'py-8 md:py-8'}`}>
+    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'py-2 md:py-2 shadow-md' : 'py-2 md:py-8'}`}>
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between lg:grid lg:grid-cols-3">
 
@@ -37,10 +37,11 @@ const Header = () => {
 
           {/* Logo center/left */}
           <div className="flex justify-start lg:justify-center">
-            <Link to="/" className={`flex flex-col items-center transition-all duration-500 ${scrolled ? 'scale-75 md:scale-90' : 'scale-90 md:scale-125'}`}>
-              <Logo className="w-[100px] md:w-[150px] lg:w-[180px]" />
+            <Link to="/" className={`flex flex-col items-center transition-all duration-500 ${scrolled ? 'scale-90 md:scale-90' : 'scale-90 md:scale-125'}`}>
+              <Logo className="w-[110px] md:w-[150px] lg:w-[180px]" />
             </Link>
           </div>
+
 
 
           {/* Right nav & Mobile trigger container */}
@@ -68,11 +69,24 @@ const Header = () => {
       </div>
 
       <div className={`
-        lg:hidden fixed inset-0 ${scrolled ? 'top-[64px]' : 'top-[112px]'} bg-[#fee9ba] paper-texture z-[110] transition-all duration-500 ease-in-out shadow-2xl
+        lg:hidden fixed inset-0 top-0 bg-[#fee9ba] paper-texture z-[110] transition-all duration-500 ease-in-out
         ${open ? 'translate-x-0 opacity-100 visible' : 'translate-x-full opacity-0 invisible'}
       `}>
+        {/* Mobile Drawer Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b-2 border-[#1a5e3a]/10">
+          <div className="flex justify-start">
+            <Logo className="w-[110px]" />
+          </div>
+          <button
+            onClick={() => setOpen(false)}
+            className="p-2 text-[#1a5e3a] border-2 border-[#1a5e3a] rounded-md bg-[#f4b700]/10"
+            aria-label="Close menu"
+          >
+            <X size={24} />
+          </button>
+        </div>
 
-        <div className="p-10 flex flex-col gap-y-10 h-full overflow-y-auto pt-16">
+        <div className="p-10 flex flex-col gap-y-10 h-full overflow-y-auto">
           {[...NAV_LEFT, ...NAV_RIGHT].map((item) => (
             <NavLink
               key={item.path}
@@ -85,6 +99,7 @@ const Header = () => {
           ))}
         </div>
       </div>
+
 
     </header>
   );

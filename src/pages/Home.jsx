@@ -103,14 +103,15 @@ const Home = () => {
 
         {/* Banner Images Section - Full Screen Coverage */}
         <section className="bg-[#1a5e3a] pb-12 md:pb-20 min-h-screen flex flex-col justify-center">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6 w-full">
-            <div className="overflow-hidden h-[60vh] md:h-[70vh]">
-              <img src={thirdHero1} alt="Madras Cafe authentic" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-12 px-6 w-full">
+            <div className="overflow-hidden h-auto">
+              <img src={thirdHero1} alt="Madras Cafe authentic" className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="overflow-hidden h-[60vh] md:h-[70vh]">
-              <img src={thirdHero2} alt="Madras Cafe specialties" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div className="overflow-hidden h-auto">
+              <img src={thirdHero2} alt="Madras Cafe specialties" className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
+
 
           <div className="text-center px-6 mt-8">
             <Link to="/menu" className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-12 py-5 font-display font-bold tracking-[0.2em] text-sm transition-all transform hover:scale-105 shadow-xl">
