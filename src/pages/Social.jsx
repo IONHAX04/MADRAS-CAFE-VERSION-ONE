@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Heart } from 'lucide-react';
+
 import { INSTAGRAM_FEED } from '../data/mock';
 
 const Social = () => {

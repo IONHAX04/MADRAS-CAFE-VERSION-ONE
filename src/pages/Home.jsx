@@ -9,9 +9,12 @@ import StickyHorizontalScroll from '../components/StickyHorizontalScroll';
 
 
 // Original Banners
-import banner4 from '../assets/banners/BANNER4.jpg';
 import banner5 from '../assets/home/secondary-banner.jpeg';
-import banner6 from '../assets/banners/BANNER6.jpg';
+
+
+import thirdHero1 from '../assets/home/ThirdHeroOne.jpeg';
+import thirdHero2 from '../assets/home/ThirdHeroTwo.jpeg';
+
 
 // Original Gallery images
 import g1 from '../assets/gallery/gallery1.png';
@@ -29,12 +32,12 @@ const Home = () => {
   useEffect(() => {
     const t = setInterval(() => setCurrent((c) => (c + 1) % HERO_SLIDES.length), 6000);
     return () => clearInterval(t);
-  }, [HERO_SLIDES.length]);
+  }, []);
 
   return (
     <div className="bg-[#fee9ba] relative">
       {/* Hero Carousel - STICKY Section */}
-      <section className="relative md:sticky top-0 h-[70vh] md:h-screen bg-[#fee9ba] overflow-hidden z-0">
+      <section className="relative md:sticky top-0 h-[85vh] md:h-screen bg-[#fee9ba] overflow-hidden z-0">
         <div className="relative h-full w-full">
           {HERO_SLIDES.map((slide, idx) => (
             <div
@@ -42,10 +45,14 @@ const Home = () => {
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
             >
               <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-x-0 top-12 md:top-24 flex flex-col items-center text-center px-6">
-                <h1 className="font-display font-black text-[#1a5e3a] text-4xl md:text-7xl tracking-tight">{slide.title}</h1>
-                <p className="text-[#1a5e3a] font-display tracking-[0.2em] mt-4 text-sm md:text-xl uppercase font-bold">{slide.subtitle}</p>
-                <Link to={slide.link} className="mt-8 inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-xl">
+              <div className="absolute inset-x-0 top-6 md:top-12 flex flex-col items-center text-center px-6">
+
+                <h1 className="font-display font-black text-[#1a5e3a] text-4xl md:text-8xl tracking-tight">{slide.title}</h1>
+                <p className="text-[#1a5e3a] font-display tracking-[0.3em] mt-4 text-sm md:text-2xl uppercase font-bold">{slide.subtitle}</p>
+              </div>
+              <div className="absolute inset-x-0 bottom-20 md:bottom-24 flex justify-center z-30">
+
+                <Link to={slide.link} className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-12 py-5 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-2xl border-2 border-[#1a5e3a]">
                   {slide.cta}
                 </Link>
               </div>
@@ -89,22 +96,23 @@ const Home = () => {
         <StickyHorizontalScroll />
 
         {/* Soft Serve Heading */}
-        <section className="bg-[#1a5e3a] paper-texture pt-20 pb-0 px-6 text-center border-t-4 border-[#f4b700]">
+        <section className="bg-[#1a5e3a] paper-texture pt-12 md:pt-20 pb-0 px-6 text-center border-t-4 border-[#f4b700]">
           <h2 className="font-display font-black text-white text-5xl md:text-8xl tracking-tight uppercase">SOUTH INDIAN</h2>
           <p className="font-script text-[#f4b700] text-4xl md:text-6xl mt-4">Check Out The Menu</p>
         </section>
 
-        {/* Banner Images Section */}
-        <section className="bg-[#1a5e3a] pb-20">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6">
-            <div className="overflow-hidden rounded-xl shadow-2xl border-2 border-[#f4b700]/30">
-              <img src={banner4} alt="Madras Cafe authentic" className="w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700" />
+        {/* Banner Images Section - Full Screen Coverage */}
+        <section className="bg-[#1a5e3a] pb-12 md:pb-20 min-h-screen flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-6 w-full">
+            <div className="overflow-hidden h-[60vh] md:h-[70vh]">
+              <img src={thirdHero1} alt="Madras Cafe authentic" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="overflow-hidden rounded-xl shadow-2xl border-2 border-[#f4b700]/30">
-              <img src={banner6} alt="Madras Cafe specialties" className="w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700" />
+            <div className="overflow-hidden h-[60vh] md:h-[70vh]">
+              <img src={thirdHero2} alt="Madras Cafe specialties" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
-          <div className="text-center px-6">
+
+          <div className="text-center px-6 mt-8">
             <Link to="/menu" className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-12 py-5 font-display font-bold tracking-[0.2em] text-sm transition-all transform hover:scale-105 shadow-xl">
               VIEW THE FULL MENU
             </Link>

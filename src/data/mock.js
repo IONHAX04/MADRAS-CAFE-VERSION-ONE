@@ -11,11 +11,7 @@ import f2 from '../assets/images/food2.jpeg';
 import f3 from '../assets/images/food3.jpg';
 import f4 from '../assets/images/food4.jpg';
 import f5 from '../assets/images/food5.jpg';
-import f6 from '../assets/images/food6.jpeg';
-import f7 from '../assets/images/food7.png';
-import f8 from '../assets/images/food8.png';
-import f9 from '../assets/images/food9.png';
-import f10 from '../assets/images/food10.png';
+
 import f11 from '../assets/images/food11.jpg';
 import f12 from '../assets/images/food12.jpeg';
 import f13 from '../assets/images/food13.jpeg';
@@ -24,9 +20,7 @@ import f15 from '../assets/images/food15.jpg';
 import f16 from '../assets/images/food16.jpeg';
 import f17 from '../assets/images/food17.jpg';
 import f18 from '../assets/images/food18.jpeg';
-import f19 from '../assets/images/food19.jpeg';
-import f20 from '../assets/images/food20.jpeg';
-import f21 from '../assets/images/food21.jpeg';
+
 
 import plainDosa from '../assets/menu/plain-dosa.jpg';
 import masalDosa from '../assets/menu/masal-dosa.jpg';

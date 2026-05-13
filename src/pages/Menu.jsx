@@ -66,7 +66,8 @@ const Menu = () => {
 
       {/* Menu Items Sections */}
       <div className="pb-12">
-        {categories.map((cat, idx) => (
+        {categories.map((cat) => (
+
           <div 
             key={cat.id} 
             ref={(el) => (sectionRefs.current[cat.id] = el)}
