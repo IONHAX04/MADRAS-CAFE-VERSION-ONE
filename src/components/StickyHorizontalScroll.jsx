@@ -59,7 +59,7 @@ export default function StickyHorizontalScroll() {
         className="relative hidden md:block"
         style={{ height: `${PANELS.length * 140}vh` }}
       >
-        <div className="sticky top-[88px] h-[calc(100vh-88px)] w-screen overflow-hidden">
+        <div className="sticky top-[64px] h-[calc(100vh-64px)] w-screen overflow-hidden">
           <motion.div
             style={{ x }}
             className="flex h-full"
@@ -82,7 +82,7 @@ export default function StickyHorizontalScroll() {
 
       <section className="md:hidden">
         {PANELS.map((p, i) => (
-          <div key={i} className={`min-h-[calc(100vh-88px)] w-full ${p.bg}`}>
+          <div key={i} className={`min-h-[calc(100vh-64px)] w-full ${p.bg}`}>
             <Panel panel={p} index={i} mobile />
           </div>
         ))}
