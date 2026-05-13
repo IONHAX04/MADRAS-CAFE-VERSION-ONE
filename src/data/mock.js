@@ -1,7 +1,10 @@
 import b1 from '../assets/banners/BANNER1.jpg';
 import b2 from '../assets/banners/BANNER2.jpg';
 import b3 from '../assets/banners/BANNER3.jpg';
-import latestV6 from '../assets/homeCarousel/latestV6.jpeg';
+import versionOne from '../assets/homeCarousel/versionOne.jpeg';
+import versionTwo from '../assets/homeCarousel/versionTwo.jpeg';
+import versionThree from '../assets/homeCarousel/versionThree.jpeg';
+
 
 import f1 from '../assets/images/food1.jpeg';
 import f2 from '../assets/images/food2.jpeg';
@@ -78,7 +81,7 @@ export const NAV_RIGHT = [
 export const HERO_SLIDES = [
   {
     id: 1,
-    image: latestV6,
+    image: versionOne,
     title: 'AUTHENTIC SOUTH INDIAN',
     subtitle: 'EXPERIENCE THE TASTE OF TRADITION',
     cta: 'VIEW MENU',
@@ -86,7 +89,7 @@ export const HERO_SLIDES = [
   },
   {
     id: 2,
-    image: latestV6,
+    image: versionTwo,
     title: 'CRISPY MASALA DOSAS',
     subtitle: 'SERVED WITH CHUTNEY & SAMBAR',
     cta: 'SEE THE MENU',
@@ -94,7 +97,7 @@ export const HERO_SLIDES = [
   },
   {
     id: 3,
-    image: latestV6,
+    image: versionThree,
     title: 'NOW OPEN',
     subtitle: 'FIND YOUR NEAREST MADRAS CAFE',
     cta: 'FIND A LOCATION',

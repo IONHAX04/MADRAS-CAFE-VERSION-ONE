@@ -5,7 +5,8 @@ import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import StickyHorizontalScroll from '../components/StickyHorizontalScroll';
 
 // Hero Placeholder
-import latestV6 from '../assets/homeCarousel/latestV6.jpeg';
+// (Import removed as images are now handled in mock.js)
+
 
 // Original Banners
 import banner4 from '../assets/banners/BANNER4.jpg';
@@ -40,7 +41,7 @@ const Home = () => {
               key={slide.id}
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
             >
-              <img src={latestV6} alt={slide.title} className="w-full h-full object-cover" />
+              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
               <div className="absolute inset-x-0 top-12 md:top-24 flex flex-col items-center text-center px-6">
                 <h1 className="font-display font-black text-[#1a5e3a] text-4xl md:text-7xl tracking-tight">{slide.title}</h1>
                 <p className="text-[#1a5e3a] font-display tracking-[0.2em] mt-4 text-sm md:text-xl uppercase font-bold">{slide.subtitle}</p>
