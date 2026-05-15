@@ -13,22 +13,22 @@ const PANELS = [
   {
     kind: "intro",
     eyebrow: "Chapter 01",
-    title: "A small kitchen,",
-    titleAccent: "a long table.",
-    body: "Madras Cafe is a sixty-year-old room in Mylapore. We cook the south of India the way our grandmothers did — slowly, quietly, with a brass davarah on the counter that has never left.",
-    cta: { label: "Read the Story", to: "/menu" },
+    title: "A Weekend Kitchen,",
+    titleAccent: "A South Indian Story.",
+    body: "Experience the true essence of Madras. We open our doors every Friday (06:00 PM - 10:00 PM), Saturday and Sunday (10:00 AM - 11:00 PM) to bring you the freshest, most authentic flavors of the south.",
+    cta: { label: "View Opening Time", to: "/contact" },
     bg: "bg-[#fee9ba]",
     image: banner4,
   },
   {
     kind: "menu",
     eyebrow: "Chapter 02",
-    title: "Twenty-five plates.",
-    titleAccent: "One bill of fare.",
-    body: "Three regions, four meals a day. Ghee Roast Dosas, Chettinad Biryani, Bisi Bele Bath, and a coffee that takes a minute and a half to pour.",
+    title: "Crispy & Golden.",
+    titleAccent: "Pure Tradition.",
+    body: "Simplicity on a plate. Golden brown, perfectly crisp Dosas and Vadais served with our signature chutneys. The authentic taste of Madras, crafted with love and served with tradition.",
     cta: { label: "See the Menu", to: "/menu" },
-    bg: "bg-[#1a5e3a] text-white",
-    items: DOSA_UTHAPAM.slice(0, 4),
+    bg: "bg-[#1a5e3a] text-[#fee9ba]",
+    items: DOSA_UTHAPAM.slice(0, 2), // Fewer items for a "crispy" look
   },
 ];
 
@@ -165,7 +165,7 @@ function Panel({ panel, index, mobile = false }) {
                     {m.name}
                   </p>
                   <span className="text-xs font-bold whitespace-nowrap">
-                    {m.price || "₹ 180"}
+                    {m.price}
                   </span>
                 </div>
               </div>

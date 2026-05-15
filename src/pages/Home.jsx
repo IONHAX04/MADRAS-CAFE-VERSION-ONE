@@ -30,11 +30,14 @@ const Home = () => {
     <div className="bg-[#fee9ba] relative">
       {/* Hero Carousel - STICKY Section */}
       <section className="relative md:sticky top-0 h-[85vh] md:h-screen bg-[#fee9ba] overflow-hidden z-0">
-        <div className="relative h-full w-full">
-          {HERO_SLIDES.map((slide, idx) => (
+        <div 
+          className="flex h-full transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {HERO_SLIDES.map((slide) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+              className="relative min-w-full h-full"
             >
               <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
               <div className="absolute inset-x-0 top-6 md:top-12 flex flex-col items-center text-center px-6">
@@ -89,31 +92,7 @@ const Home = () => {
         {/* Secondary Hero Section (Sticky Horizontal Scroll - 2 Chapters) */}
         <StickyHorizontalScroll />
 
-        {/* Soft Serve Heading */}
-        <section className="bg-[#1a5e3a] paper-texture pt-12 md:pt-20 pb-0 px-6 text-center border-t-4 border-[#f4b700]">
-          <h2 className="font-display font-black text-white text-3xl md:text-5xl tracking-tight uppercase">SOUTH INDIAN</h2>
-          <p className="font-script text-[#f4b700] text-2xl md:text-4xl mt-4">Check Out The Menu</p>
 
-        </section>
-
-        {/* Banner Images Section - Full Screen Coverage */}
-        <section className="bg-[#1a5e3a] pb-12 md:pb-20 min-h-screen flex flex-col justify-center">
-          <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-12 px-6 w-full">
-            <div className="overflow-hidden h-auto">
-              <img src={thirdHero1} alt="Madras Cafe authentic" className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="overflow-hidden h-auto">
-              <img src={thirdHero2} alt="Madras Cafe specialties" className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700" />
-            </div>
-          </div>
-
-
-          <div className="text-center px-6 mt-8">
-            <Link to="/menu" className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-12 py-5 font-display font-bold tracking-[0.2em] text-sm transition-all transform hover:scale-105 shadow-xl">
-              VIEW THE FULL MENU
-            </Link>
-          </div>
-        </section>
 
         {/* Promo tiles */}
         <section className="bg-[#fee9ba] paper-texture py-24 px-6">
@@ -137,6 +116,29 @@ const Home = () => {
         <section className="bg-[#1a5e3a] relative overflow-hidden">
           <img src={banner5} alt="Madras Cafe banner" className="w-full block object-cover opacity-90" />
           <div className="absolute inset-0 bg-[#1a5e3a]/10" />
+        </section>
+
+        <section className="bg-[#1a5e3a] paper-texture pt-12 md:pt-20 pb-0 px-6 text-center border-t-4 border-[#f4b700]">
+          <h2 className="font-display font-black text-white text-3xl md:text-5xl tracking-tight uppercase">SOUTH INDIAN</h2>
+          <p className="font-script text-[#f4b700] text-2xl md:text-4xl mt-4">Check Out The Menu</p>
+        </section>
+
+        {/* Banner Images Section - Moved to bottom */}
+        <section className="bg-[#1a5e3a] pb-12 md:pb-24 flex flex-col justify-center">
+          <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-12 px-6 w-full">
+            <div className="overflow-hidden h-auto">
+              <img src={thirdHero1} alt="Madras Cafe authentic" className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="overflow-hidden h-auto">
+              <img src={thirdHero2} alt="Madras Cafe specialties" className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700" />
+            </div>
+          </div>
+
+          <div className="text-center px-6 mt-8">
+            <Link to="/menu" className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-12 py-5 font-display font-bold tracking-[0.2em] text-sm transition-all transform hover:scale-105 shadow-xl">
+              VIEW THE FULL MENU
+            </Link>
+          </div>
         </section>
 
       </div>

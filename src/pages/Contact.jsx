@@ -20,15 +20,20 @@ const Contact = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-display font-bold text-sm tracking-widest text-neutral-500 uppercase">Address</h3>
-                  <p className="text-neutral-800 font-medium">106 John St, Toronto, Ontario</p>
+                  <p className="text-neutral-800 font-medium">Uetlibergstrasse 30, 8045 Zürich, Switzerland</p>
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-sm tracking-widest text-neutral-500 uppercase">Phone</h3>
-                  <p className="text-neutral-800 font-medium">416-576-2959</p>
+                  <p className="text-neutral-800 font-medium">+41 76 395 39 21</p>
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-sm tracking-widest text-neutral-500 uppercase">Email</h3>
-                  <p className="text-neutral-800 font-medium">hello@madrascafe.ca</p>
+                  <p className="text-neutral-800 font-medium">hello@madrascafe.ch</p>
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-sm tracking-widest text-neutral-500 uppercase">Opening Hours</h3>
+                  <p className="text-neutral-800 font-medium">Friday: 06:00 PM - 10:00 PM</p>
+                  <p className="text-neutral-800 font-medium">Sat & Sun: 10:00 AM - 11:00 PM</p>
                 </div>
               </div>
             </div>

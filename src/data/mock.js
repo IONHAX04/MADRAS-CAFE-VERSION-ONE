@@ -67,7 +67,7 @@ export const NAV_LEFT = [
 
 export const NAV_RIGHT = [
   { name: 'CATERING', path: '/catering' },
-  { name: 'SOCIAL', path: '/social' },
+  { name: 'CONTACT US', path: '/contact' },
 ];
 
 export const HERO_SLIDES = [
@@ -100,39 +100,45 @@ export const HERO_SLIDES = [
 export const IDLY_VADA = [
   {
     id: 'idly-2',
-    name: 'IDLY 2 PIECES',
+    name: 'IDLY',
     description: 'Soft steamed rice cakes served with sambar and chutneys.',
     image: idlyImg,
+    price: '5 CHF / piece'
   },
   {
     id: 'sambar-idly',
     name: 'SAMBAR IDLY',
     description: 'Idly soaked in aromatic sambar.',
     image: sambarIdlyImg,
+    price: '5 CHF / piece'
   },
   {
     id: 'podi-idly',
     name: 'PODI IDLY',
     description: 'Bite-sized idlies tossed in spicy lentil powder.',
     image: podiIdlyImg,
+    price: '5 CHF / piece'
   },
   {
     id: 'ghee-podi-idly',
     name: 'GHEE PODI IDLY',
     description: 'Podi idly topped with aromatic ghee.',
     image: gheePodiIdlyImg,
+    price: '5 CHF per piece'
   },
   {
     id: 'medhu-vada',
     name: 'MEDHU VADA',
     description: 'Crispy deep-fried lentil donuts served with sambar.',
     image: medhuVadaiImg,
+    price: '5 CHF'
   },
   {
     id: 'sambar-vada',
     name: 'SAMBAR VADA',
     description: 'Medhu vada soaked in sambar.',
     image: sambarVadaImg,
+    price: '5 CHF'
   }
 ];
 
@@ -142,72 +148,84 @@ export const DOSA_UTHAPAM = [
     name: 'PLAIN DOSA',
     description: 'Thin crispy rice and lentil crepe.',
     image: plainDosa,
+    price: '10 CHF'
   },
   {
     id: 'masal-dosa',
     name: 'MASAL DOSA',
     description: 'Dosa stuffed with spiced potato masala.',
     image: masalDosa,
+    price: '10 CHF'
   },
   {
     id: 'mysore-masal',
     name: 'MYSORE MASAL DOSA',
     description: 'Dosa with spicy Mysore chutney and potato filling.',
     image: mysoreMasalDosa,
+    price: '10 CHF'
   },
   {
     id: 'podi-dosa',
     name: 'PODI DOSA',
     description: 'Dosa sprinkled with spicy lentil powder.',
     image: podiDosa,
+    price: '10 CHF'
   },
   {
     id: 'onion-dosa',
     name: 'ONION DOSA',
     description: 'Dosa topped with finely chopped onions.',
     image: onionDosa,
+    price: '10 CHF'
   },
   {
     id: 'panner-dosa',
     name: 'PANNER DOSA',
     description: 'Dosa stuffed with spiced paneer.',
     image: paneerDosa,
+    price: '10 CHF'
   },
   {
     id: 'mushroom-masal',
     name: 'MUSHROOM MASAL DOSA',
     description: 'Dosa with spiced mushroom filling.',
     image: plainDosa,
+    price: '10 CHF'
   },
   {
     id: 'garlic-chutney',
     name: 'GARLIC CHUTNY DOSA',
     description: 'Dosa spread with spicy garlic chutney.',
     image: garlicDosa,
+    price: '10 CHF'
   },
   {
     id: 'plain-uthapam',
     name: 'PLAIN UTHAPAM',
     description: 'Thick rice and lentil pancake.',
     image: plainUthappamImg,
+    price: '12 CHF'
   },
   {
     id: 'onion-uthapam',
     name: 'ONION UTHAPAM',
     description: 'Uthapam topped with onions.',
     image: onionUthappamImg,
+    price: '12 CHF'
   },
   {
     id: 'podi-uthapam',
     name: 'PODI UTHAPAM',
     description: 'Uthapam topped with spicy podi.',
     image: podiUthappamImg,
+    price: '12 CHF'
   },
   {
     id: 'mc-spl-uthapam',
     name: 'MC SPL UTAPAM',
     description: 'Special Madras Cafe uthapam with mixed toppings.',
     image: mcSplUthappamImg,
+    price: '12 CHF'
   }
 ];
 
@@ -217,36 +235,42 @@ export const SNACKS_TIFFIN = [
     name: 'VALAKKA BHAJJI',
     description: 'Plantain fritters dipped in gram flour batter.',
     image: valakkaBajjiImg,
+    price: '5 CHF'
   },
   {
     id: 'onion-bajji',
     name: 'ONION BAJJI',
     description: 'Crispy onion fritters.',
     image: onionBajjiImg,
+    price: '5 CHF'
   },
   {
     id: 'molaka-bajji',
     name: 'MOLAKA BAJJI',
     description: 'Spicy chili fritters.',
     image: molakaBajjiImg,
+    price: '5 CHF'
   },
   {
     id: 'aloo-bonda',
     name: 'ALOO BONDA',
     description: 'Spiced potato balls dipped in batter and deep fried.',
     image: alooBondaImg,
+    price: '5 CHF'
   },
   {
     id: 'chapati',
     name: 'CHAPATI',
     description: 'Whole wheat flatbread served with curry.',
     image: chapathiImg,
+    price: '12 CHF'
   },
   {
     id: 'parotta',
     name: 'PAROTTA',
     description: 'Layered flaky flatbread.',
     image: parottaImg,
+    price: '12 CHF'
   }
 ];
 
@@ -256,73 +280,78 @@ export const SWEETS_DRINKS = [
     name: 'GULAB JAMOON',
     description: 'Soft milk dumplings soaked in rose-flavored sugar syrup.',
     image: gulabJamunImg,
+    price: '3 CHF'
   },
   {
     id: 'ladoo',
     name: 'LADOO',
     description: 'Traditional Indian sweet balls.',
     image: ladduImg,
+    price: '3 CHF'
   },
   {
     id: 'tea',
     name: 'TEA',
     description: 'Authentic masala tea.',
     image: teaImg,
+    price: '3 CHF'
   },
   {
     id: 'filter-coffee',
     name: 'FILTER COFFEE',
     description: 'Authentic South Indian filter coffee.',
     image: filterCoffeeMenuImg,
+    price: '3 CHF'
   },
   {
     id: 'falooda',
     name: 'FALOODA',
     description: 'Cold dessert with noodles, syrup and ice cream.',
     image: faloodaImg,
+    price: '3 CHF'
   },
   {
     id: 'butter-milk',
     name: 'BUTTER MILK',
     description: 'Refreshing spiced yogurt drink.',
     image: butterMilkImg,
+    price: '3 CHF'
   },
   {
     id: 'lemon-soda',
     name: 'LEMON SODA',
     description: 'Zesty lemon soda.',
     image: lemonSodaImg,
+    price: '3 CHF'
   },
   {
     id: 'lassi',
     name: 'LASSI',
     description: 'Sweet or salted yogurt drink.',
     image: lassiImg,
+    price: '3 CHF'
   },
   {
     id: 'rose-milk',
     name: 'ROSE MILK',
     description: 'Chilled milk flavored with rose syrup.',
     image: roseMilkImg,
+    price: '3 CHF'
   }
 ];
 
 export const LOCATIONS = [
   {
-    id: 'john-st',
-    name: '106 JOHN ST - TORONTO',
-    address: '106 John St, Toronto, Ontario',
-    phone: '416-576-2959',
+    id: 'zurich',
+    name: 'MADRAS CAFE - ZÜRICH',
+    address: 'Uetlibergstrasse 30, 8045 Zürich, Switzerland',
+    phone: '+41 76 395 39 21',
     hours: [
-      'Sun: 4:00pm - 11:00pm',
-      'Mon: 4:00pm - 11:00pm',
-      'Tue: 4:00pm - 11:00pm',
-      'Wed: 4:00pm - 11:00pm',
-      'Thu: 4:00pm - 11:00pm',
-      'Fri: 4:00pm - 11:00pm',
-      'Sat: 4:00pm - 11:00pm',
+      'Fri: 6:00pm - 10:00pm',
+      'Sat: 10:00am - 11:00pm',
+      'Sun: 10:00am - 11:00pm',
     ],
-    city: 'Toronto',
+    city: 'Zürich',
   }
 ];
 

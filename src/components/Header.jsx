@@ -41,8 +41,15 @@ const Header = () => {
           {/* Logo center/left */}
           <div className="flex justify-start lg:justify-center">
             <Link to="/" className="flex flex-col items-center transition-all duration-500 scale-90 md:scale-100">
-              <Logo className="w-[110px] md:w-[150px] lg:w-[180px]" />
+              <Logo className="w-[80px] md:w-[150px] lg:w-[180px]" />
             </Link>
+          </div>
+
+          {/* Mobile catchy text */}
+          <div className="lg:hidden flex-1 px-4 text-center">
+            <p className="font-display font-black text-[#1a5e3a] text-[10px] leading-tight uppercase line-clamp-2 tracking-tighter">
+              Authentic South Indian <br /> Flavor in Zürich
+            </p>
           </div>
 
 

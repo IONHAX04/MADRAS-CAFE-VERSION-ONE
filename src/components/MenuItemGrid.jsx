@@ -27,7 +27,10 @@ const MenuItemGrid = ({ items, label }) => {
                 />
               </div>
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="font-display font-bold tracking-widest text-[#1a5e3a] text-lg mb-2 uppercase">{item.name}</h3>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-display font-bold tracking-widest text-[#1a5e3a] text-lg uppercase line-clamp-1">{item.name}</h3>
+                  {item.price && <span className="font-display font-bold text-[#f4b700] text-sm ml-2 whitespace-nowrap">{item.price}</span>}
+                </div>
                 <p className="text-neutral-500 text-sm leading-relaxed line-clamp-1">{item.description}</p>
               </div>
             </article>
