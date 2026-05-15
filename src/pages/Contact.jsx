@@ -2,10 +2,10 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="bg-[#fee9ba] min-h-screen pt-[100px]">
-      <section className="bg-[#fee9ba] paper-texture py-20 px-6 text-center border-b border-[#1a5e3a]/10">
-        <h1 className="font-display font-black text-[#1a5e3a] text-5xl md:text-7xl tracking-tight uppercase">Contact Us</h1>
-        <p className="font-script text-[#1a5e3a] text-2xl md:text-4xl mt-4">We'd love to hear from you</p>
+    <div className="bg-[#fee9ba] pt-[70px]">
+      <section className="bg-[#1a5e3a] paper-texture py-12 px-6 text-center">
+        <h1 className="font-display font-black text-white text-4xl md:text-7xl tracking-tight uppercase">Contact Us</h1>
+        <p className="font-script text-white text-xl md:text-4xl mt-3">We'd love to hear from you</p>
       </section>
 
       <section className="max-w-4xl mx-auto py-20 px-6">

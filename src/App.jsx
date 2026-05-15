@@ -18,11 +18,13 @@ import { Toaster } from "./components/ui/toaster";
 
 import PageScrollTop from "./components/PageScrollTop";
 import WhatsAppFAB from "./components/WhatsAppFAB";
+import ConfettiEffect from "./components/ConfettiEffect";
 
 function App() {
   return (
     <div className="App min-h-screen flex flex-col bg-[#fee9ba]">
       <BrowserRouter>
+        <ConfettiEffect />
         <PageScrollTop />
         <ScrollToTop />
         <WhatsAppFAB />

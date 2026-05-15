@@ -31,7 +31,7 @@ const Home = () => {
       {/* Hero Carousel - STICKY Section */}
       <section className="relative md:sticky top-0 h-[85vh] md:h-screen bg-[#fee9ba] overflow-hidden z-0">
         <div 
-          className="flex h-full transition-transform duration-1000 ease-in-out"
+          className="flex w-full h-full transition-transform duration-1000 ease-in-out"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {HERO_SLIDES.map((slide) => (
@@ -60,14 +60,14 @@ const Home = () => {
           <button
             aria-label="Previous slide"
             onClick={() => setCurrent((c) => (c - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
-            className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
+            className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
           >
             <ChevronLeft size={32} />
           </button>
           <button
             aria-label="Next slide"
             onClick={() => setCurrent((c) => (c + 1) % HERO_SLIDES.length)}
-            className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
+            className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
           >
             <ChevronRight size={32} />
           </button>

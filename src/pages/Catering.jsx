@@ -27,10 +27,10 @@ Notes: ${form.notes}`;
   };
 
   return (
-    <div className="bg-[#fee9ba]">
-      <section className="bg-[#1a5e3a] paper-texture py-20 px-6 text-center">
-        <h1 className="font-display font-black text-white text-5xl md:text-7xl tracking-tight">CATERING</h1>
-        <p className="font-script text-white text-2xl md:text-4xl mt-3">Bring The Authentic Taste</p>
+    <div className="bg-[#fee9ba] pt-[70px]">
+      <section className="bg-[#1a5e3a] paper-texture py-12 px-6 text-center">
+        <h1 className="font-display font-black text-white text-4xl md:text-7xl tracking-tight uppercase">CATERING</h1>
+        <p className="font-script text-white text-xl md:text-4xl mt-3">Bring The Authentic Taste</p>
       </section>
 
       <section className="max-w-5xl mx-auto py-20 px-6 paper-texture">
