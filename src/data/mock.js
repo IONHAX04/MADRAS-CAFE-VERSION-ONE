@@ -124,21 +124,21 @@ export const IDLY_VADA = [
     name: 'GHEE PODI IDLY',
     description: 'Podi idly topped with aromatic ghee.',
     image: gheePodiIdlyImg,
-    price: '5 CHF per piece'
+    price: '5 CHF / piece'
   },
   {
     id: 'medhu-vada',
     name: 'MEDHU VADA',
     description: 'Crispy deep-fried lentil donuts served with sambar.',
     image: medhuVadaiImg,
-    price: '5 CHF per piece'
+    price: '5 CHF / piece'
   },
   {
     id: 'sambar-vada',
     name: 'SAMBAR VADA',
     description: 'Medhu vada soaked in sambar.',
     image: sambarVadaImg,
-    price: '5 CHF per piece'
+    price: '5 CHF / piece'
   }
 ];
 

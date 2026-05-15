@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="bg-[#fee9ba] relative">
       {/* Hero Section - STICKY Section */}
-      <section className="relative md:sticky top-0 h-[100dvh] bg-black overflow-hidden z-0">
+      <section className="relative md:sticky top-0 h-[80dvh] md:h-[100dvh] bg-black overflow-hidden z-0">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
