@@ -7,10 +7,8 @@ import ConsentNotice from "./components/ConsentNotice";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
-import Locations from "./pages/Locations";
 import Catering from "./pages/Catering";
 import Social from "./pages/Social";
-import Franchising from "./pages/Franchising";
 import Contact from "./pages/Contact";
 import Accessibility from "./pages/Accessibility";
 import UserPrivacy from "./pages/UserPrivacy";
@@ -18,20 +16,23 @@ import Terms from "./pages/Terms";
 import Imprint from "./pages/Imprint";
 import { Toaster } from "./components/ui/toaster";
 
+import PageScrollTop from "./components/PageScrollTop";
+import WhatsAppFAB from "./components/WhatsAppFAB";
+
 function App() {
   return (
     <div className="App min-h-screen flex flex-col bg-[#fee9ba]">
       <BrowserRouter>
+        <PageScrollTop />
         <ScrollToTop />
+        <WhatsAppFAB />
         <Header />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/locations" element={<Locations />} />
             <Route path="/catering" element={<Catering />} />
             <Route path="/social" element={<Social />} />
-            <Route path="/franchising" element={<Franchising />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/accessibility" element={<Accessibility />} />
             <Route path="/privacy" element={<UserPrivacy />} />

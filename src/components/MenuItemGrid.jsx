@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useToast } from '../hooks/use-toast';
-import { LOCATIONS } from '../data/mock';
 
 const MenuItemGrid = ({ items, label }) => {
   return (

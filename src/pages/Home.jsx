@@ -16,15 +16,7 @@ import thirdHero1 from '../assets/home/ThirdHeroOne.jpeg';
 import thirdHero2 from '../assets/home/ThirdHeroTwo.jpeg';
 
 
-// Original Gallery images
-import g1 from '../assets/gallery/gallery1.png';
-import g2 from '../assets/gallery/gallery2.png';
-import g3 from '../assets/gallery/gallery3.png';
-import g4 from '../assets/gallery/gallery4.png';
-import g5 from '../assets/gallery/gallery5.png';
-import g6 from '../assets/gallery/gallery6.png';
-import g7 from '../assets/gallery/gallery7.png';
-import g8 from '../assets/gallery/gallery8.png';
+// Gallery imports removed
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
@@ -147,69 +139,6 @@ const Home = () => {
           <div className="absolute inset-0 bg-[#1a5e3a]/10" />
         </section>
 
-        {/* Properly Fitted Gallery */}
-        <section className="bg-[#fee9ba] paper-texture py-24 px-6 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-black text-[#1a5e3a] text-3xl md:text-4xl tracking-tight mb-4 uppercase">OUR GALLERY</h2>
-
-              <div className="h-1 w-24 bg-[#f4b700] mx-auto"></div>
-              <p className="font-display font-bold text-[#1a5e3a] text-lg md:text-xl mt-6 uppercase tracking-[0.2em] opacity-90">A Taste of Tradition in Every Frame</p>
-
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[300px]">
-              <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg h-[300px] md:h-auto">
-                <img src={g1} alt="South Indian Platter" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g2} alt="Filter Coffee" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g3} alt="Indian Sweets" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g4} alt="Cafe Ambiance" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-            </div>
-
-            {/* Section 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:auto-rows-[250px] mt-4">
-              <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g5} alt="Dosa Process" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg h-[300px] md:h-auto">
-                <img src={g8} alt="Chef Action" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g6} alt="South Indian Snacks" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-            </div>
-
-            {/* Section 3 */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[250px] mt-4">
-              <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g7} alt="Refreshing Drinks" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g2} alt="Food Close-up 1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-              <div className="relative group overflow-hidden rounded-xl shadow-lg h-[250px] md:h-auto">
-                <img src={g3} alt="Sweets Close-up" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

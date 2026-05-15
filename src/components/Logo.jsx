@@ -4,11 +4,9 @@ import logoImg from '../assets/logo/latestLogo.png';
 import headerLogoImg from '../assets/logo/latestHeaderLogo.png';
 
 
-const Logo = ({ size = 'h-18 md:h-16', variant = 'w', className = '' }) => {
-  const src = variant === 'w' ? headerLogoImg : logoImg;
-
+const Logo = ({ size = 'h-18 md:h-16', className = '' }) => {
   return (
-    <img src={src} alt="Madras Cafe" className={`sj-logo object-contain ${size} ${className}`} />
+    <img src={logoImg} alt="Madras Cafe" className={`sj-logo object-contain ${size} ${className}`} />
   );
 };
 

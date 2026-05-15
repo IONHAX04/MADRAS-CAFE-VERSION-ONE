@@ -47,7 +47,7 @@ import chapathiImg from '../assets/menu/chappathi.jpg';
 import parottaImg from '../assets/menu/parotta.jpg';
 import gulabJamunImg from '../assets/menu/gulab-jamun.jpg';
 import ladduImg from '../assets/menu/laddu.jpg';
-import teaImg from '../assets/menu/tea.jpg';
+import teaImg from '../assets/menu/tea.jpeg';
 import filterCoffeeMenuImg from '../assets/menu/filter-coffee.jpg';
 import faloodaImg from '../assets/menu/falooda.jpg';
 import butterMilkImg from '../assets/menu/butter-milk.jpg';
@@ -63,13 +63,11 @@ import filterCoffee from "../assets/home/filter-coffee.jpeg";
 export const NAV_LEFT = [
   { name: 'HOME', path: '/' },
   { name: 'MENU', path: '/menu' },
-  { name: 'LOCATIONS', path: '/locations' },
 ];
 
 export const NAV_RIGHT = [
   { name: 'CATERING', path: '/catering' },
   { name: 'SOCIAL', path: '/social' },
-  { name: 'FRANCHISING', path: '/franchising' },
 ];
 
 export const HERO_SLIDES = [
@@ -84,18 +82,18 @@ export const HERO_SLIDES = [
   {
     id: 2,
     image: versionTwo,
-    title: 'CRISPY MASALA DOSAS',
-    subtitle: 'SERVED WITH CHUTNEY & SAMBAR',
-    cta: 'SEE THE MENU',
+    title: 'AUTHENTIC SOUTH INDIAN',
+    subtitle: 'CRISPY & GOLDEN VADAIS',
+    cta: 'VIEW MENU',
     link: '/menu',
   },
   {
     id: 3,
     image: versionThree,
-    title: 'NOW OPEN',
-    subtitle: 'FIND YOUR NEAREST MADRAS CAFE',
-    cta: 'FIND A LOCATION',
-    link: '/locations',
+    title: 'AUTHENTIC SOUTH INDIAN',
+    subtitle: 'SOFT & STEAMED IDLIES',
+    cta: 'VIEW MENU',
+    link: '/menu',
   },
 ];
 

@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu as MenuIcon, X, Zap } from 'lucide-react';
 import Logo from './Logo';
 import { NAV_LEFT, NAV_RIGHT } from '../data/mock';
+import TopBanner from './TopBanner';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -24,8 +25,8 @@ const Header = () => {
   const activeStyle = ({ isActive }) => `${linkBase} ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`;
 
   return (
-    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'shadow-md' : ''} py-2`}>
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
+    <header className={`sj-header sticky top-0 z-[100] bg-[#fee9ba] paper-texture border-b-2 border-[#1a5e3a] transition-all duration-500 ${scrolled ? 'shadow-md' : ''}`}>
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 py-2">
         <div className="flex items-center justify-between lg:grid lg:grid-cols-3">
 
           {/* Left nav */}
@@ -70,6 +71,8 @@ const Header = () => {
         </div>
 
       </div>
+      
+      <TopBanner />
 
       <div className={`
         lg:hidden fixed inset-0 top-0 bg-[#fee9ba] paper-texture z-[110] transition-all duration-500 ease-in-out
