@@ -56,34 +56,36 @@ const Home = () => {
             </div>
           ))}
 
-          {/* Controls */}
-          <button
-            aria-label="Previous slide"
-            onClick={() => setCurrent((c) => (c - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
-            className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
-          >
-            <ChevronLeft size={32} />
-          </button>
-          <button
-            aria-label="Next slide"
-            onClick={() => setCurrent((c) => (c + 1) % HERO_SLIDES.length)}
-            className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
-          >
-            <ChevronRight size={32} />
-          </button>
-
-          {/* Dots */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-            {HERO_SLIDES.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                aria-label={`Slide ${idx + 1}`}
-                className={`h-1.5 transition-all duration-300 rounded-full ${idx === current ? 'w-12 bg-[#f4b700]' : 'w-3 bg-white/40'}`}
-              />
-            ))}
-          </div>
         </div>
+
+        {/* Controls */}
+        <button
+          aria-label="Previous slide"
+          onClick={() => setCurrent((c) => (c - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
+          className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
+        >
+          <ChevronLeft size={32} />
+        </button>
+        <button
+          aria-label="Next slide"
+          onClick={() => setCurrent((c) => (c + 1) % HERO_SLIDES.length)}
+          className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
+        >
+          <ChevronRight size={32} />
+        </button>
+
+        {/* Dots */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+          {HERO_SLIDES.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrent(idx)}
+              aria-label={`Slide ${idx + 1}`}
+              className={`h-1.5 transition-all duration-300 rounded-full ${idx === current ? 'w-12 bg-[#f4b700]' : 'w-3 bg-white/40'}`}
+            />
+          ))}
+        </div>
+
       </section>
 
       {/* Main Content Sections - Overlays the sticky hero */}
