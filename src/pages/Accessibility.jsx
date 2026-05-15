@@ -32,16 +32,6 @@ const Accessibility = () => {
               <li>Postal address: 106 John St, Toronto, Ontario</li>
             </ul>
 
-            <h3 className="font-display font-bold text-xl text-neutral-800 pt-4 uppercase tracking-wide">Technical Specifications</h3>
-            <p>
-              Accessibility of Madras Cafe relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>HTML</li>
-              <li>WAI-ARIA</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
           </div>
         </div>
       </section>
