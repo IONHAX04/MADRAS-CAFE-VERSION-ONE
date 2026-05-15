@@ -44,18 +44,18 @@ const Home = () => {
 
         <div className="relative z-10 w-full h-full">
           {/* Top Text Content */}
-          <div className="absolute inset-x-0 top-12 md:top-24 flex flex-col items-center text-center px-6">
-            <h1 className="font-display font-black text-white text-4xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-2xl mb-4">
+          <div className="absolute inset-x-0 top-8 md:top-24 flex flex-col items-center text-center px-6">
+            <h1 className="font-display font-black text-white text-3xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-2xl mb-4">
               {heroData.title}
             </h1>
-            <p className="text-[#f4b700] font-display tracking-[0.4em] mt-2 text-xs md:text-lg uppercase font-bold drop-shadow-lg">
+            <p className="text-[#f4b700] font-display tracking-[0.4em] mt-2 text-[10px] md:text-lg uppercase font-bold drop-shadow-lg">
               {heroData.subtitle}
             </p>
           </div>
           
           {/* Bottom Button */}
-          <div className="absolute inset-x-0 bottom-12 md:bottom-24 flex justify-center px-6">
-            <Link to={heroData.link} className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-2xl border-2 border-[#1a5e3a]">
+          <div className="absolute inset-x-0 bottom-8 md:bottom-24 flex justify-center px-6">
+            <Link to={heroData.link} className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-8 py-3 md:px-10 md:py-4 font-display font-bold tracking-widest text-xs md:text-sm transition-all transform hover:scale-105 shadow-2xl border-2 border-[#1a5e3a]">
               {heroData.cta}
             </Link>
           </div>
