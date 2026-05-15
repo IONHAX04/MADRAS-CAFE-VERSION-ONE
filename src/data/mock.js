@@ -131,14 +131,14 @@ export const IDLY_VADA = [
     name: 'MEDHU VADA',
     description: 'Crispy deep-fried lentil donuts served with sambar.',
     image: medhuVadaiImg,
-    price: '5 CHF'
+    price: '5 CHF per piece'
   },
   {
     id: 'sambar-vada',
     name: 'SAMBAR VADA',
     description: 'Medhu vada soaked in sambar.',
     image: sambarVadaImg,
-    price: '5 CHF'
+    price: '5 CHF per piece'
   }
 ];
 
@@ -155,49 +155,49 @@ export const DOSA_UTHAPAM = [
     name: 'MASAL DOSA',
     description: 'Dosa stuffed with spiced potato masala.',
     image: masalDosa,
-    price: '10 CHF'
+    price: '12 CHF'
   },
   {
     id: 'mysore-masal',
     name: 'MYSORE MASAL DOSA',
     description: 'Dosa with spicy Mysore chutney and potato filling.',
     image: mysoreMasalDosa,
-    price: '10 CHF'
+    price: '12 CHF'
   },
   {
     id: 'podi-dosa',
     name: 'PODI DOSA',
     description: 'Dosa sprinkled with spicy lentil powder.',
     image: podiDosa,
-    price: '10 CHF'
+    price: '12 CHF'
   },
   {
     id: 'onion-dosa',
     name: 'ONION DOSA',
     description: 'Dosa topped with finely chopped onions.',
     image: onionDosa,
-    price: '10 CHF'
+    price: '12 CHF'
   },
   {
     id: 'panner-dosa',
     name: 'PANNER DOSA',
     description: 'Dosa stuffed with spiced paneer.',
     image: paneerDosa,
-    price: '10 CHF'
+    price: '12 CHF'
   },
   {
     id: 'mushroom-masal',
     name: 'MUSHROOM MASAL DOSA',
     description: 'Dosa with spiced mushroom filling.',
-    image: plainDosa,
-    price: '10 CHF'
+    image: garlicDosa,
+    price: '12 CHF'
   },
   {
     id: 'garlic-chutney',
     name: 'GARLIC CHUTNY DOSA',
     description: 'Dosa spread with spicy garlic chutney.',
-    image: garlicDosa,
-    price: '10 CHF'
+    image: plainDosa,
+    price: '12 CHF'
   },
   {
     id: 'plain-uthapam',

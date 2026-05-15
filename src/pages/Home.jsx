@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HERO_SLIDES, PROMO_TILES } from '../data/mock';
 import StickyHorizontalScroll from '../components/StickyHorizontalScroll';
 
 // Hero Placeholder
 // (Import removed as images are now handled in mock.js)
+
+
+import heroVideo from '../videos/2.mp4';
 
 
 // Original Banners
@@ -19,71 +21,44 @@ import thirdHero2 from '../assets/home/ThirdHeroTwo.jpeg';
 // Gallery imports removed
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setCurrent((c) => (c + 1) % HERO_SLIDES.length), 6000);
-    return () => clearInterval(t);
-  }, []);
+  const heroData = HERO_SLIDES[0];
 
   return (
     <div className="bg-[#fee9ba] relative">
-      {/* Hero Carousel - STICKY Section */}
-      <section className="relative md:sticky top-0 h-[100dvh] bg-[#fee9ba] overflow-hidden z-0">
-        <div 
-          className="flex w-full h-full transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
-        >
-          {HERO_SLIDES.map((slide) => (
-            <div
-              key={slide.id}
-              className="relative min-w-full h-full"
-            >
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-x-0 top-6 md:top-12 flex flex-col items-center text-center px-6">
-
-                <h1 className="font-display font-black text-[#1a5e3a] text-3xl md:text-5xl lg:text-6xl tracking-tight">{slide.title}</h1>
-                <p className="text-[#1a5e3a] font-display tracking-[0.4em] mt-4 text-xs md:text-lg uppercase font-bold opacity-80">{slide.subtitle}</p>
-
-
-              </div>
-              <div className="absolute inset-x-0 bottom-20 md:bottom-24 flex justify-center z-30">
-
-                <Link to={slide.link} className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-12 py-5 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-2xl border-2 border-[#1a5e3a]">
-                  {slide.cta}
-                </Link>
-              </div>
-            </div>
-          ))}
-
+      {/* Hero Section - STICKY Section */}
+      <section className="relative md:sticky top-0 h-[100dvh] bg-black overflow-hidden z-0">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-70"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          {/* Subtle Gradient Overlay for Readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
         </div>
 
-        {/* Controls */}
-        <button
-          aria-label="Previous slide"
-          onClick={() => setCurrent((c) => (c - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
-          className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
-        >
-          <ChevronLeft size={32} />
-        </button>
-        <button
-          aria-label="Next slide"
-          onClick={() => setCurrent((c) => (c + 1) % HERO_SLIDES.length)}
-          className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20"
-        >
-          <ChevronRight size={32} />
-        </button>
-
-        {/* Dots */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-          {HERO_SLIDES.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrent(idx)}
-              aria-label={`Slide ${idx + 1}`}
-              className={`h-1.5 transition-all duration-300 rounded-full ${idx === current ? 'w-12 bg-[#f4b700]' : 'w-3 bg-white/40'}`}
-            />
-          ))}
+        <div className="relative z-10 w-full h-full">
+          {/* Top Text Content */}
+          <div className="absolute inset-x-0 top-12 md:top-24 flex flex-col items-center text-center px-6">
+            <h1 className="font-display font-black text-white text-4xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-2xl mb-4">
+              {heroData.title}
+            </h1>
+            <p className="text-[#f4b700] font-display tracking-[0.4em] mt-2 text-xs md:text-lg uppercase font-bold drop-shadow-lg">
+              {heroData.subtitle}
+            </p>
+          </div>
+          
+          {/* Bottom Button */}
+          <div className="absolute inset-x-0 bottom-12 md:bottom-24 flex justify-center px-6">
+            <Link to={heroData.link} className="inline-block bg-[#f4b700] text-[#1a5e3a] hover:bg-white px-10 py-4 font-display font-bold tracking-widest text-sm transition-all transform hover:scale-105 shadow-2xl border-2 border-[#1a5e3a]">
+              {heroData.cta}
+            </Link>
+          </div>
         </div>
 
       </section>
