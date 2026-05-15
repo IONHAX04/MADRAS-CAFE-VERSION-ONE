@@ -7,11 +7,6 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <footer className="sj-footer">
-      {/* South Indian Header */}
-      <section className="bg-[#1a5e3a] paper-texture py-12 px-6 text-center border-t-4 border-[#f4b700]">
-        <h2 className="font-display font-black text-white text-3xl md:text-5xl tracking-tight uppercase">SOUTH INDIAN</h2>
-        <p className="font-script text-[#f4b700] text-2xl md:text-4xl mt-4">Follow Our Journey</p>
-      </section>
 
       {/* Instagram */}
       <section className="bg-[#fee9ba] paper-texture py-16 px-6">

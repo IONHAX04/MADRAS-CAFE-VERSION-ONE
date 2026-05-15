@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 import { Link } from "react-router-dom";
 import { DOSA_UTHAPAM } from "../data/mock";
-import banner4 from "../assets/banners/BANNER4.jpg";
+import banner4 from "../assets/home/ThirdHeroOne.jpeg";
 
 const PANELS = [
   {

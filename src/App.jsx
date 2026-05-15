@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App min-h-screen flex flex-col bg-[#fee9ba]">
       <BrowserRouter>
-        <ConfettiEffect />
+        {/* <ConfettiEffect /> */}
         <PageScrollTop />
         <ScrollToTop />
         <WhatsAppFAB />
